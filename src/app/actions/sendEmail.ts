@@ -12,7 +12,7 @@ export async function sendEmail(formData: any) {
       from: "Site PlanteComigo <onboarding@resend.dev>", // Depois você configura seu domínio
       to: "ola@plantecomigo.com",
       subject: `Novo Contato: ${service}`,
-      reply_to: email,
+      replyTo: email, // Correção feita aqui: de reply_to para replyTo
       text: `Nome: ${name}\nServiço: ${service}\nMensagem: ${message}`,
     });
     return { success: true };
