@@ -8,6 +8,7 @@ interface BlurredHeroProps {
   alt: string;
   parallaxY?: MotionValue<string>;
   priority?: boolean;
+  className?: string;
 }
 
 /**
@@ -21,12 +22,14 @@ export default function BlurredHero({
   alt,
   parallaxY,
   priority = false,
+  className = "", // <-- 2. RECEBA A PROPRIEDADE AQUI
 }: BlurredHeroProps) {
   if (!src) return null;
 
   return (
     /* Wrapper de parallax — posição absoluta herdada do pai via inset-0 */
     <motion.div
+      className={className} // <-- 3. APLIQUE A PROPRIEDADE AQUI
       style={{
         position: "absolute",
         inset: 0,
