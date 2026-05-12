@@ -6,8 +6,9 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import ProjectDetail from "@/components/projetos/ProjectDetail";
 import { getProjectBySlug, projects } from "@/lib/projects-data";
 
+// 1. No Next.js 15, params é uma Promise
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export function generateStaticParams() {
@@ -15,16 +16,24 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const project = getProjectBySlug(params.slug);
+  // 2. Precisamos usar o "await" para ler o slug
+  const { slug } = await params;
+  const project = getProjectBySlug(slug);
+  
   if (!project) return { title: "Projeto não encontrado — Plante Comigo" };
+  
   return {
     title: `${project.title} — Plante Comigo`,
     description: project.description,
   };
 }
 
-export default function ProjectPage({ params }: Props) {
-  const project = getProjectBySlug(params.slug);
+// 3. A página agora é uma função "async"
+export default async function ProjectPage({ params }: Props) {
+  // 4. Aguardamos o params antes de buscar o projeto
+  const { slug } = await params;
+  const project = getProjectBySlug(slug);
+  
   if (!project) notFound();
 
   return (
