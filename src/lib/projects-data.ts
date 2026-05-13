@@ -304,7 +304,7 @@ export const projects: Project[] = [
       { src: "/pedras2.png", alt: "Casacor 2019 — Composição botânica", aspect: "portrait" },
       { src: "/pedras4.png", alt: "Casacor 2019 — Plantas de interior", aspect: "landscape" },
       { src: "/pedras5.png", alt: "Casacor 2019 — Detalhe verde", aspect: "portrait" },
-      { src: "/pedras3.png", alt: "Casacor 2019 — Vista do espaço", aspect: "landscape" },
+      { src: "/pedras7.png", alt: "Casacor 2019 — Vista do espaço", aspect: "landscape" },
     ],
   },
   {

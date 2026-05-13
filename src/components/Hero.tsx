@@ -61,7 +61,7 @@ export default function Hero() {
         >
           Transformando espaços<br />
           através da{" "}
-          <em className="italic text-sand/90">natureza.</em>
+          <em className="italic text-sand font-normal">natureza.</em>
         </motion.h1>
 
         <motion.p
