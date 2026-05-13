@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image"; // Não esqueça de importar o componente Image!
 
 const footerLinks = [
   { label: "Instagram", href: "https://www.instagram.com/plantecomigo/" },
@@ -18,12 +19,23 @@ export default function Footer() {
     <footer className="bg-charcoal border-t border-white/4">
       {/* Main footer */}
       <div className="px-8 md:px-12 py-16 max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-0">
-        {/* Brand */}
+        
+        {/* Brand com a Logo */}
         <div>
-          <span className="font-cormorant font-light text-xl tracking-[0.15em] uppercase text-ice/40">
-            PlanteComigo
-          </span>
-          <p className="mt-4 text-[0.8rem] font-dm font-light text-ice/25 leading-relaxed max-w-[240px]">
+          <Link href="/" className="flex items-center gap-3 group w-fit mb-4">
+            <div className="relative w-8 h-8 opacity-40 group-hover:opacity-70 transition-opacity duration-300">
+              <Image
+                src="/logo1.png"
+                alt="Logo Plante Comigo"
+                fill
+                className="object-contain brightness-0 invert"
+              />
+            </div>
+            <span className="font-cormorant font-light text-xl tracking-[0.15em] uppercase text-ice/40 group-hover:text-ice/70 transition-colors duration-300">
+              PlanteComigo
+            </span>
+          </Link>
+          <p className="text-[0.8rem] font-dm font-light text-ice/25 leading-relaxed max-w-[240px]">
             Transformando espaços através da natureza. Paisagismo e design verde
             com qualidade premium.
           </p>

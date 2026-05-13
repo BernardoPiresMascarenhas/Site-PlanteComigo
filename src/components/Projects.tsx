@@ -1,21 +1,18 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion"; // Removemos o useState e AnimatePresence
 import Image from "next/image";
 import Link from "next/link";
 import { fadeUpChildVariants, staggerContainerVariants } from "@/lib/animations";
 import { projects as allProjects } from "@/lib/projects-data";
 
-// Atualizado com os slugs reais dos 4 primeiros projetos
 const homeGridConfig: Record<string, string> = {
-  "automovel-club":           "col-span-7",
-  "casacor-2019":             "col-span-5",
-  "casa-mangabeiras":         "col-span-4",
-  "hospital-sao-lucas": "col-span-8",
+  "automovel-club":           "col-span-12 md:col-span-7",
+  "casacor-2019":             "col-span-12 md:col-span-5",
+  "casa-mangabeiras":         "col-span-12 md:col-span-4",
+  "hospital-sao-lucas":       "col-span-12 md:col-span-8",
 };
 
-// O .slice(0, 4) limita o array para exibir apenas 4 projetos na Home
 const projects = allProjects.slice(0, 4).map((p) => ({
   ...p,
   span: homeGridConfig[p.slug] ?? "col-span-6",
@@ -23,73 +20,40 @@ const projects = allProjects.slice(0, 4).map((p) => ({
 }));
 
 function ProjectCard({ project }: { project: (typeof projects)[0] }) {
-  const [hovered, setHovered] = useState(false);
-
   return (
     <motion.div
       variants={fadeUpChildVariants}
       className={`${project.span} relative overflow-hidden cursor-pointer group bg-charcoal`}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
     >
       <Link href={`/projetos/${project.slug}`} className="block w-full h-full">
         <div className="relative min-h-[300px] md:min-h-[380px]">
+          
           <Image
             src={project.src}
             alt={project.title}
             fill
-            className="object-cover transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
-            style={{
-              filter: hovered
-                ? "brightness(0.55) saturate(1.1)"
-                : "brightness(0.75) saturate(0.9)",
-            }}
+            className="object-cover transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] md:group-hover:scale-105 brightness-[0.55] saturate-[1.1] md:brightness-[0.75] md:saturate-[0.9] md:group-hover:brightness-[0.55] md:group-hover:saturate-[1.1]"
             sizes="(max-width: 768px) 100vw, 60vw"
           />
 
-          <div className="absolute bottom-6 left-7 z-10 flex items-baseline gap-3">
+          <div className="absolute bottom-6 left-7 z-10 flex items-baseline gap-3 opacity-0 md:opacity-100 md:group-hover:opacity-0 transition-opacity duration-300">
             <span className="font-cormorant text-[1rem] text-sand/40">{project.num}</span>
             <span className="text-[0.55rem] tracking-[0.2em] uppercase text-sand/25 font-dm font-light">
               {project.year}
             </span>
           </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-dark/85 via-transparent to-transparent flex flex-col justify-end p-7 z-10 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 ease-out">
+            <span className="text-[0.58rem] tracking-[0.25em] uppercase text-sand mb-2 font-dm font-light translate-y-0 md:translate-y-3 md:group-hover:translate-y-0 transition-transform duration-500 ease-out delay-75">
+              {project.category}
+            </span>
+            <p className="font-cormorant font-light text-[1.6rem] text-ice leading-tight translate-y-0 md:translate-y-3 md:group-hover:translate-y-0 transition-transform duration-500 ease-out delay-100">
+              {project.title}
+            </p>
+            <span className="mt-3 text-[0.58rem] tracking-[0.18em] uppercase text-sand/70 font-dm font-light border-b border-sand/25 pb-0.5 w-fit translate-y-0 md:translate-y-2 md:group-hover:translate-y-0 transition-transform duration-500 ease-out delay-150">
+              Ver projeto
+            </span>
+          </div>
 
-          <AnimatePresence>
-            {hovered && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.4 }}
-                className="absolute inset-0 bg-gradient-to-t from-dark/85 via-transparent to-transparent flex flex-col justify-end p-7 z-10"
-              >
-                <motion.span
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.35, delay: 0.05 }}
-                  className="text-[0.58rem] tracking-[0.25em] uppercase text-sand mb-2 font-dm font-light"
-                >
-                  {project.category}
-                </motion.span>
-                <motion.p
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.35, delay: 0.1 }}
-                  className="font-cormorant font-light text-[1.6rem] text-ice leading-tight"
-                >
-                  {project.title}
-                </motion.p>
-                <motion.span
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: 0.18 }}
-                  className="mt-3 text-[0.58rem] tracking-[0.18em] uppercase text-sand/70 font-dm font-light border-b border-sand/25 pb-0.5 w-fit"
-                >
-                  Ver projeto
-                </motion.span>
-              </motion.div>
-            )}
-          </AnimatePresence>
         </div>
       </Link>
     </motion.div>

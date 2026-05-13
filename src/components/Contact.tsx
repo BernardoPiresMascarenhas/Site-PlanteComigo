@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image"; // <-- Importamos o Image
 import { fadeUpChildVariants, staggerContainerVariants } from "@/lib/animations";
 import { sendEmail } from "@/app/actions/sendEmail";
 
@@ -56,13 +57,27 @@ export default function Contact() {
 
   return (
     <section id="contato" className="grid grid-cols-1 md:grid-cols-2 min-h-[600px]">
-      {/* Left — moss bg */}
-      <div className="bg-moss px-10 md:px-16 py-24 md:py-28 flex flex-col justify-between">
+      
+      {/* Left — moss bg (Com Marca D'água) */}
+      <div className="relative overflow-hidden bg-moss px-10 md:px-16 py-24 md:py-28 flex flex-col justify-between">
+        
+        {/* --- INÍCIO DA MARCA D'ÁGUA --- */}
+        <div className="absolute -bottom-32 -left-20 w-[28rem] h-[28rem] opacity-[0.06] pointer-events-none -rotate-12 z-0">
+          <Image
+            src="/logo1.png"
+            alt=""
+            fill
+            className="object-contain brightness-0 invert"
+          />
+        </div>
+        {/* --- FIM DA MARCA D'ÁGUA --- */}
+
         <motion.div
           variants={staggerContainerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
+          className="relative z-10" // Garante que o texto fique acima da marca d'água
         >
           <motion.p
             variants={fadeUpChildVariants}
@@ -122,7 +137,6 @@ export default function Contact() {
             Envie uma mensagem
           </motion.p>
 
-          {/* Mudança aqui: de <motion.div> para <motion.form> */}
           <motion.form 
             variants={fadeUpChildVariants} 
             className="space-y-8"

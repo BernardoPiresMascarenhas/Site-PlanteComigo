@@ -2,17 +2,26 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image"; // <-- Adicionamos a importação da Imagem
 
 export default function ProjectsHero() {
   return (
     <section className="bg-charcoal pt-40 pb-24 px-8 md:px-12 relative overflow-hidden">
-      {/* Decorative large number */}
+      
+      {/* --- INÍCIO DA MARCA D'ÁGUA DA LOGO --- */}
+      {/* Substituímos o texto "PC" por esta div com a logo */}
       <div
-        className="absolute right-0 top-1/2 -translate-y-1/2 font-cormorant font-light text-[22vw] leading-none text-white/[0.025] select-none pointer-events-none pr-8"
+        className="absolute -right-32 top-1/2 -translate-y-1/2 w-[45rem] h-[45rem] opacity-[0.03] pointer-events-none rotate-12 z-0"
         aria-hidden="true"
       >
-        PC
+        <Image
+          src="/logo1.png"
+          alt=""
+          fill
+          className="object-contain brightness-0 invert"
+        />
       </div>
+      {/* --- FIM DA MARCA D'ÁGUA --- */}
 
       <div className="max-w-[1300px] mx-auto relative z-10">
         {/* Breadcrumb */}

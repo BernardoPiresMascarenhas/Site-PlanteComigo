@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Sobre", href: "#sobre" },
@@ -34,16 +35,36 @@ export default function Navbar() {
           : "py-6 bg-transparent"
       )}
     >
-      {/* Logo */}
-      <Link
-        href="/"
-        className={cn(
-          "font-cormorant text-xl tracking-[0.15em] uppercase transition-colors duration-400 font-light",
-          scrolled ? "text-moss" : "text-ice"
-        )}
-      >
-        PlanteComigo
-      </Link>
+      {/* Logo e Texto */}
+        <Link
+          href="/"
+          className="flex items-center gap-3 group"
+        >
+          {/* Símbolo da Marca (logo1.png) */}
+          <div className="relative w-7 h-7 md:w-8 md:h-8 transition-transform duration-500 group-hover:scale-105">
+            <Image
+              src="/logo1.png"
+              alt="Logo Plante Comigo"
+              fill
+              className={cn(
+                "object-contain transition-all duration-400",
+                // A mágica: se o fundo for escuro (scrolled=false), a logo precisa ser clara (invertida/brilho alto).
+                // Se o fundo for claro (scrolled=true), a logo volta a ser escura (ou assume a cor original se for preta).
+                scrolled ? "brightness-0 opacity-80" : "brightness-0 invert opacity-90"
+              )}
+            />
+          </div>
+
+          {/* Texto */}
+          <span
+            className={cn(
+              "font-cormorant text-xl tracking-[0.15em] uppercase transition-colors duration-400 font-light",
+              scrolled ? "text-moss" : "text-ice"
+            )}
+          >
+            PlanteComigo
+          </span>
+        </Link>
 
       {/* Desktop links */}
       <ul className="hidden md:flex gap-10 list-none">
