@@ -8,7 +8,7 @@ import { sendEmail } from "@/app/actions/sendEmail";
 
 const contactInfo = [
   { label: "Endereço", value: "Belo Horizonte, Minas Gerais" },
-  { label: "Telefone", value: "(31) 99999-0000" },
+  { label: "Telefone", value: "(31) 99957-6263" },
   { label: "E-mail", value: "ola@plantecomigo.com" },
   { label: "Horário", value: "Seg – Sex, 8h às 18h" },
 ];

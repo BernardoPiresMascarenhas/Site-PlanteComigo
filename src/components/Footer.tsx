@@ -1,10 +1,12 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image"; // Não esqueça de importar o componente Image!
 
 const footerLinks = [
   { label: "Instagram", href: "https://www.instagram.com/plantecomigo/" },
   { label: "Threads", href: "https://www.threads.com/@plantecomigo?xmt=AQG0bNtxr2T_Mk4P2f51r0jqNSOaaProKeiep33Ag3OJj0s" },
-  { label: "WhatsApp", href: "https://wa.me/5531999990000" },
+  { label: "WhatsApp", href: "https://wa.me/5531999576263" },
 ];
 
 const navLinks = [
@@ -22,7 +24,20 @@ export default function Footer() {
         
         {/* Brand com a Logo */}
         <div>
-          <Link href="/" className="flex items-center gap-3 group w-fit mb-4">
+          <Link 
+            href="/" 
+            className="flex items-center gap-3 group w-fit mb-4"
+            onClick={(e) => {
+              // Verifica se já estamos na Home para fazer a rolagem suave
+              if (window.location.pathname === "/") {
+                e.preventDefault();
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }
+            }}
+          >
             <div className="relative w-8 h-8 opacity-40 group-hover:opacity-70 transition-opacity duration-300">
               <Image
                 src="/logo1.png"
