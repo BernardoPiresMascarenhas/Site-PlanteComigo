@@ -14,7 +14,7 @@ const differentials = [
   },
   {
     title: "Confiabilidade",
-    text: "Há 6 anos no mercado oferecendo o melhor dos nossos conhecimentos e prestando um serviço de confiança para cada cliente.",
+    text: "Há 8 anos no mercado oferecendo o melhor dos nossos conhecimentos e prestando um serviço de confiança para cada cliente.",
   },
   {
     title: "Melhores fornecedores",
