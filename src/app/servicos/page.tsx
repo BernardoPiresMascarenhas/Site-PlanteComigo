@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { fadeUpChildVariants, staggerContainerVariants } from "@/lib/animations";
-import Navbar from "@/components/Navbar"; // Certifique-se de que o caminho está correto
-import Footer from "@/components/Footer"; // Certifique-se de que o caminho está correto
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const detailedPhases = [
   {
@@ -14,7 +14,9 @@ const detailedPhases = [
     title: "Criação e Planejamento",
     subtitle: "A fundação do seu novo espaço",
     desc: "Tudo começa com a escuta. Entendemos seus desejos, necessidades e a vocação natural do seu ambiente. Realizamos um levantamento topográfico e botânico completo, desenhando um projeto que alinha a estética premium com a funcionalidade real do dia a dia. Nenhum detalhe é deixado ao acaso.",
-    image: "/mangabeiras0.png",
+    image: "/plantacriacao2.jpeg",
+    // Adicionamos o caminho do PDF aqui. Certifique-se de colocar o arquivo na pasta /public
+    pdfPath: "/planta-projeto.pdf", 
   },
   {
     id: "encomenda",
@@ -22,7 +24,7 @@ const detailedPhases = [
     title: "Seleção de Fornecedores",
     subtitle: "A busca pela excelência",
     desc: "A beleza de um jardim depende diretamente da qualidade de suas raízes e materiais. Temos uma rede de fornecedores homologados e viveiros exclusivos. Selecionamos rigorosamente as espécies botânicas mais saudáveis, os vasos mais elegantes e os substratos mais ricos, garantindo um resultado final impecável.",
-    image: "/bandeirantes0.png",
+    image: "/fornecedores.jpeg",
   },
   {
     id: "implantacao",
@@ -30,7 +32,7 @@ const detailedPhases = [
     title: "Implantação",
     subtitle: "Do papel para a terra",
     desc: "Nossa equipe entra em cena para transformar o projeto em realidade. Com um cronograma bem definido, realizamos a preparação do solo, plantio técnico, instalação de sistemas de irrigação e posicionamento de adornos. Tudo feito de forma limpa, organizada e com prazo previsível.",
-    image: "/guaja2.png", 
+    image: "/implantacao.jpeg", 
   },
   {
     id: "manutencao",
@@ -38,7 +40,7 @@ const detailedPhases = [
     title: "Manutenção",
     subtitle: "O segredo da vitalidade",
     desc: "Um jardim é um organismo vivo que muda com as estações. Oferecemos um serviço de manutenção especializada para garantir que o seu espaço não apenas sobreviva, mas prospere. Podas técnicas, adubação equilibrada, controle de pragas e limpeza cíclica para que o verde esteja sempre exuberante.",
-    image: "/serra1.png", 
+    image: "/manutencao.jpeg", 
   },
 ];
 
@@ -49,7 +51,6 @@ export default function ServicosPage() {
       <main className="min-h-screen bg-ice">
         {/* HERO SECTION */}
         <section className="bg-charcoal pt-40 pb-24 px-8 md:px-12 relative overflow-hidden">
-          {/* Marca d'água */}
           <div className="absolute -right-32 top-1/2 -translate-y-1/2 w-[45rem] h-[45rem] opacity-[0.03] pointer-events-none rotate-12 z-0">
             <Image src="/logo1.png" alt="" fill className="object-contain brightness-0 invert" />
           </div>
@@ -160,6 +161,23 @@ export default function ServicosPage() {
                       <motion.p variants={fadeUpChildVariants} className="text-[0.95rem] font-dm font-light text-warm-gray leading-[2] mb-12">
                         {phase.desc}
                       </motion.p>
+
+                      {/* Botão para o PDF (renderiza apenas se houver pdfPath) */}
+                      {phase.pdfPath && (
+                        <motion.div variants={fadeUpChildVariants}>
+                          <a 
+                            href={phase.pdfPath} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-3 px-8 py-3 border border-olive text-olive font-dm text-[0.65rem] tracking-[0.2em] uppercase hover:bg-olive hover:text-ice transition-all duration-400 w-fit"
+                          >
+                            Visualizar Planta
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M7 7l10 10M17 7v10H7" />
+                            </svg>
+                          </a>
+                        </motion.div>
+                      )}
                     </motion.div>
                   </div>
                 </div>
