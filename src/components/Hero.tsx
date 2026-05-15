@@ -27,7 +27,7 @@ export default function Hero() {
         style={{ y: bgY }}
       >
         <Image
-          src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1800&q=85&auto=format&fit=crop"
+          src="/hero2.jpeg"
           alt="Ambiente moderno com plantas e arquitetura contemporânea"
           fill
           priority

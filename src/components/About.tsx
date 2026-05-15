@@ -6,7 +6,7 @@ import Image from "next/image";
 import { fadeUpChildVariants, staggerContainerVariants } from "@/lib/animations";
 
 const stats = [
-  { num: "6+", label: "Anos no mercado" },
+  { num: "8+", label: "Anos no mercado" },
   { num: "100%", label: "Projetos sob medida" },
   { num: "∞", label: "Amor pelo verde" },
 ];
@@ -21,7 +21,7 @@ const pillars = [
     text: "Especialistas em criar e cuidar de jardins. Uma área bem cuidada pede uma manutenção cíclica.",
   },
   {
-    label: "Execução",
+    label: "Desenvolvimento",
     text: "Equipe preparada e capacitada, com prazo informado no projeto para total previsibilidade da implantação.",
   },
   {
@@ -37,7 +37,8 @@ export default function About() {
   return (
     <section id="sobre" className="bg-cream py-32 px-8 md:px-12">
       <div className="max-w-[1300px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-24 items-center">
+        {/* AJUSTE NO GRID: Alterado de items-center para md:items-stretch para alinhar alturas no desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-24 items-center md:items-stretch">
 
           {/* Image column */}
           <motion.div
@@ -45,17 +46,16 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="relative h-[520px] md:h-[620px]"
+            className="relative h-[520px] md:h-[765px] md:mt-[20px]"
           >
             <Image
-              src="/about.png"
+              src="/about3.jpeg"
               alt="Espaço verde contemporâneo projetado pela PlanteComigo"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
-            {/* Accent border */}
-            <div className="absolute -bottom-6 -right-6 w-[55%] h-[55%] border border-sand pointer-events-none" />
+            {/* O quadrado (Accent border) foi removido daqui */}
           </motion.div>
 
           {/* Text column */}
@@ -64,6 +64,7 @@ export default function About() {
             variants={staggerContainerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
+            className="flex flex-col justify-center py-4"
           >
             <motion.p
               variants={fadeUpChildVariants}
@@ -71,8 +72,6 @@ export default function About() {
             >
               Nossa história
             </motion.p>
-
-            
 
             <motion.h2
               variants={fadeUpChildVariants}

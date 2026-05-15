@@ -125,32 +125,7 @@ export const projects: Project[] = [
       { src: "/hospital1.png", alt: "Casacor 2019 — Vista do espaço", aspect: "landscape" },
     ],
   },
-  {
-    slug: "cobertura-vale-do-sereno",
-    num: "05",
-    title: "Cobertura Vale do Sereno",
-    category: "Projeto paisagístico em residência",
-    year: "2023",
-    location: "Nova Lima, MG",
-    services: ["Criação", "Implementação"],
-    tags: ["Residencial", "Cobertura", "Vasos de Design"],
-    description:
-      "Paisagismo em altura: trazendo a natureza para uma cobertura sofisticada, com foco em espécies resistentes a ventos e alta insolação.",
-    longDescription: [
-      "Projetar para coberturas exige um conhecimento técnico específico sobre a ação dos ventos e a intensidade solar. Neste projeto no Vale do Sereno, o verde foi elevado aos ares.",
-      "Optamos por uma composição de vasos de terracota e cerâmica de alta qualidade, abrigando espécies esculturais como oliveiras e cactos, que suportam bem o microclima do local.",
-      "O resultado é uma extensão da área de estar, onde o horizonte se mistura com o verde cuidadosamente planejado."
-    ],
-    quote: "Trazer o verde para as alturas é criar um respiro orgânico em meio à densidade urbana.",
-    coverSrc: "/sereno2.png",
-    photos: [
-      { src: "/sereno3.png", alt: "Casacor 2019 — Ambiente principal", aspect: "landscape" },
-      { src: "/sereno5.png", alt: "Casacor 2019 — Composição botânica", aspect: "portrait" },
-      { src: "/sereno4.png", alt: "Casacor 2019 — Plantas de interior", aspect: "landscape" },
-      { src: "/sereno1.png", alt: "Casacor 2019 — Detalhe verde", aspect: "portrait" },
-      { src: "/sereno0.png", alt: "Casacor 2019 — Vista do espaço", aspect: "landscape" },
-    ],
-  },
+  
   {
     slug: "casa-retiro-do-chale",
     num: "06",
