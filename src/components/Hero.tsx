@@ -26,14 +26,26 @@ export default function Hero() {
         className="absolute inset-0"
         style={{ y: bgY }}
       >
+        {/* --- IMAGEM DESKTOP (Mostra apenas de 'md' para cima) --- */}
         <Image
           src="/hero2.jpeg"
           alt="Ambiente moderno com plantas e arquitetura contemporânea"
           fill
           priority
-          className="object-cover scale-110"
+          className="object-cover scale-110 hidden md:block" // Escondida no mobile, visível no desktop
           sizes="100vw"
         />
+
+        {/* --- IMAGEM MOBILE (Mostra apenas no celular, esconde no 'md' para cima) --- */}
+        <Image
+          src="/hero4.jpeg"
+          alt="Ambiente moderno com plantas e arquitetura contemporânea (Mobile)"
+          fill
+          priority
+          className="object-cover scale-110 block md:hidden" // Visível no mobile, escondida no desktop
+          sizes="100vw"
+        />
+
         {/* Gradient overlays */}
         <div className="absolute inset-0 bg-gradient-to-b from-dark/30 via-dark/10 to-dark/60" />
       </motion.div>
@@ -47,7 +59,8 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-[0.62rem] tracking-[0.3em] uppercase text-sand mb-6 font-dm font-normal"
+          // AJUSTE DE CONTRASTE: Mudei para font-medium e adicionei drop-shadow
+          className="text-[0.62rem] tracking-[0.3em] uppercase text-sand mb-6 font-dm font-medium drop-shadow-md"
         >
           Paisagismo · Design · Natureza
         </motion.p>
@@ -61,14 +74,16 @@ export default function Hero() {
         >
           Transformando espaços<br />
           através da{" "}
-          <em className="italic text-sand font-normal">natureza.</em>
+          {/* AJUSTE DE CONTRASTE: Mudei para font-medium e adicionei drop-shadow */}
+          <em className="italic text-sand font-medium drop-shadow-md">natureza.</em>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
-          className="font-dm font-light text-ice/65 text-[0.9rem] leading-[1.85] max-w-md mb-12 tracking-wide"
+          // AJUSTE DE CONTRASTE: Mudei a cor para branco puro (text-white) e a fonte para normal
+          className="font-dm font-normal text-white text-[0.9rem] leading-[1.85] max-w-md mb-12 tracking-wide drop-shadow-sm"
         >
           Criamos ambientes que respiram vida — unindo arquitetura contemporânea,
           natureza e design minimalista em projetos únicos.
@@ -82,7 +97,7 @@ export default function Hero() {
         >
           <Link
             href="#projetos"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-olive text-ice font-dm text-[0.7rem] font-normal tracking-[0.18em] uppercase hover:bg-moss transition-all duration-400 hover:-translate-y-0.5"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-olive text-ice font-dm text-[0.7rem] font-normal tracking-[0.18em] uppercase hover:bg-moss transition-all duration-400 hover:-translate-y-0.5 drop-shadow-sm"
           >
             Conheça nossos projetos
           </Link>
