@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     images: [
       {
-        url: "https://www.plantecomigo.com/og-image.jpeg", 
+        url: "https://www.plantecomigo.com/og-image.jpg", 
         width: 1200,
         height: 630,
         alt: "Plante Comigo — Paisagismo & Design Verde",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Plante Comigo — Paisagismo & Design Verde",
     description: "Um projeto paisagístico não muda apenas o espaço. Muda a forma como você vive dentro dele.",
-    images: ["https://www.plantecomigo.com/og-image.jpeg"],
+    images: ["https://www.plantecomigo.com/og-image.jpg"],
   },
 };
 

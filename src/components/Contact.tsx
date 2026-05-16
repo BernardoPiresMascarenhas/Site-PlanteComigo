@@ -81,7 +81,7 @@ export default function Contact() {
         >
           <motion.p
             variants={fadeUpChildVariants}
-            className="text-[0.62rem] tracking-[0.3em] uppercase text-sand/50 font-dm font-light mb-4"
+            className="text-[0.75rem] tracking-[0.3em] uppercase text-sand/50 font-dm font-light mb-4"
           >
             Vamos conversar
           </motion.p>
@@ -110,7 +110,7 @@ export default function Contact() {
           >
             {contactInfo.map((item) => (
               <div key={item.label} className="flex gap-6 items-start">
-                <span className="text-[0.58rem] tracking-[0.25em] uppercase text-sand/50 font-dm font-light w-16 flex-shrink-0 pt-0.5">
+                <span className="text-[0.70rem] tracking-[0.25em] uppercase text-sand/50 font-dm font-light w-16 flex-shrink-0 pt-0.5">
                   {item.label}
                 </span>
                 <span className="text-[0.88rem] font-dm font-light text-ice/75 leading-relaxed">
@@ -132,7 +132,7 @@ export default function Contact() {
         >
           <motion.p
             variants={fadeUpChildVariants}
-            className="text-[0.62rem] tracking-[0.3em] uppercase text-sand/40 font-dm font-light mb-10"
+            className="text-[0.75rem] tracking-[0.3em] uppercase text-sand/40 font-dm font-light mb-10"
           >
             Envie uma mensagem
           </motion.p>
@@ -145,7 +145,7 @@ export default function Contact() {
             <div>
               <label
                 htmlFor="name"
-                className="block text-[0.6rem] tracking-[0.22em] uppercase text-sand/50 font-dm font-light mb-2"
+                className="block text-[0.75rem] tracking-[0.22em] uppercase text-sand/50 font-dm font-light mb-2"
               >
                 Nome completo
               </label>
@@ -163,7 +163,7 @@ export default function Contact() {
             <div>
               <label
                 htmlFor="email"
-                className="block text-[0.6rem] tracking-[0.22em] uppercase text-sand/50 font-dm font-light mb-2"
+                className="block text-[0.75rem] tracking-[0.22em] uppercase text-sand/50 font-dm font-light mb-2"
               >
                 E-mail
               </label>
@@ -181,7 +181,7 @@ export default function Contact() {
             <div>
               <label
                 htmlFor="service"
-                className="block text-[0.6rem] tracking-[0.22em] uppercase text-sand/50 font-dm font-light mb-2"
+                className="block text-[0.75rem] tracking-[0.22em] uppercase text-sand/50 font-dm font-light mb-2"
               >
                 Serviço de interesse
               </label>
@@ -199,7 +199,7 @@ export default function Contact() {
             <div>
               <label
                 htmlFor="message"
-                className="block text-[0.6rem] tracking-[0.22em] uppercase text-sand/50 font-dm font-light mb-2"
+                className="block text-[0.75rem] tracking-[0.22em] uppercase text-sand/50 font-dm font-light mb-2"
               >
                 Mensagem
               </label>

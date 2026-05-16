@@ -71,7 +71,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="text-[0.62rem] tracking-[0.3em] uppercase text-sand/60 font-dm font-light mb-3"
+              className="text-[0.75rem] tracking-[0.3em] uppercase text-sand/60 font-dm font-light mb-3"
             >
               Portfólio
             </motion.p>
@@ -96,7 +96,7 @@ export default function Projects() {
           >
             <Link
               href="/projetos"
-              className="text-[0.62rem] tracking-[0.2em] uppercase text-sand border-b border-sand/30 pb-0.5 hover:text-ice hover:border-ice transition-colors duration-300 font-dm font-light"
+              className="text-[0.70rem] tracking-[0.2em] uppercase text-sand border-b border-sand/30 pb-0.5 hover:text-ice hover:border-ice transition-colors duration-300 font-dm font-light"
             >
               Ver todos os projetos
             </Link>

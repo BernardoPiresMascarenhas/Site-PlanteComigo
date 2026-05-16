@@ -71,7 +71,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="text-[0.62rem] tracking-[0.3em] uppercase text-sage font-dm font-normal mb-3"
+              className="text-[0.75rem] tracking-[0.3em] uppercase text-sage font-dm font-normal mb-3"
             >
               As quatro fases de um projeto paisagístico
             </motion.p>
@@ -125,10 +125,7 @@ export default function Services() {
           className="bg-cream border border-olive/10 px-10 py-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 mt-px"
         >
           <p className="text-[0.9rem] font-dm font-light text-warm-gray leading-relaxed max-w-xl">
-            A Plante Comigo também realiza cada uma dessas etapas individualmente.
-            Seja criando um paisagismo, implantando novas espécies ou fazendo a
-            manutenção do seu jardim — podemos te ajudar a chegar em ótimas
-            escolhas e resultados.
+            Estamos sempre à disposição para guiar suas escolhas em qualquer momento. Seja para idealizar um novo paisagismo, introduzir novas espécies ou cuidar da vitalidade do seu jardim, conte conosco para alcançar os melhores resultados.
           </p>
           <a
             href="#contato"

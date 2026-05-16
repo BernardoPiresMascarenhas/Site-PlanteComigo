@@ -213,7 +213,7 @@ export default function ServicosPage() {
             </p>
 
             <Link
-              href="/#contato"
+              href="https://wa.me/5531999576263"
               className="group relative inline-flex items-center justify-center px-10 py-5 bg-transparent border border-sand/30 text-sand font-dm text-[0.65rem] font-normal tracking-[0.22em] uppercase overflow-hidden transition-all duration-500"
             >
               {/* Efeito de fundo que sobe ao passar o mouse */}

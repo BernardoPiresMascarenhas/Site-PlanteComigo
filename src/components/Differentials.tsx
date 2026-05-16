@@ -34,7 +34,7 @@ export default function Differentials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="text-[0.62rem] tracking-[0.3em] uppercase text-sage font-dm font-light mb-3"
+            className="text-[0.75rem] tracking-[0.3em] uppercase text-sage font-dm font-light mb-3"
           >
             Por que escolher
           </motion.p>

@@ -68,7 +68,7 @@ export default function About() {
           >
             <motion.p
               variants={fadeUpChildVariants}
-              className="text-[0.62rem] tracking-[0.3em] uppercase text-sage font-dm font-normal mb-2"
+              className="text-[0.75rem] tracking-[0.3em] uppercase text-sage font-dm font-normal mb-2"
             >
               Nossa história
             </motion.p>
