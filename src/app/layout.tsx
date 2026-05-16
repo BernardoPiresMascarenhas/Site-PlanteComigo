@@ -18,9 +18,11 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
+  // ADICIONE ESSA LINHA AQUI EM CIMA:
+  metadataBase: new URL("https://www.plantecomigo.com"),
+  
   title: "Plante Comigo — Paisagismo & Design Verde",
-  description:
-    "A Plante Comigo é especialista em criar e cuidar de jardins. Projetos exclusivos e realizados sob medida — do plantio à manutenção. Belo Horizonte, MG.",
+  description: "A Plante Comigo é especialista em criar e cuidar de jardins. Projetos exclusivos e realizados sob medida — do plantio à manutenção. Belo Horizonte, MG.",
   keywords: "paisagismo, jardinagem, jardins internos, manutenção de jardins, Belo Horizonte, Automóvel Club, Casacor",
   
   openGraph: {
@@ -32,7 +34,8 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     images: [
       {
-        url: "/og-image.jpg", 
+        // PODE COLOCAR O LINK COMPLETO AQUI POR GARANTIA:
+        url: "https://www.plantecomigo.com/og-image.jpg", 
         width: 1200,
         height: 630,
         alt: "Plante Comigo — Paisagismo & Design Verde",
@@ -43,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Plante Comigo — Paisagismo & Design Verde",
     description: "Um projeto paisagístico não muda apenas o espaço. Muda a forma como você vive dentro dele.",
-    images: ["/og-image.jpg"],
+    images: ["https://www.plantecomigo.com/og-image.jpg"],
   },
 };
 
