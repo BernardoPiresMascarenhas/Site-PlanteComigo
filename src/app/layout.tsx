@@ -22,11 +22,28 @@ export const metadata: Metadata = {
   description:
     "A Plante Comigo é especialista em criar e cuidar de jardins. Projetos exclusivos e realizados sob medida — do plantio à manutenção. Belo Horizonte, MG.",
   keywords: "paisagismo, jardinagem, jardins internos, manutenção de jardins, Belo Horizonte, Automóvel Club, Casacor",
+  
   openGraph: {
     title: "Plante Comigo — Paisagismo & Design Verde",
-    description: "Nossa missão é levar o verde até você. Projetos sob medida, do plantio à manutenção.",
+    description: "Um projeto paisagístico não muda apenas o espaço. Muda a forma como você vive dentro dele.",
+    url: "https://www.plantecomigo.com",
+    siteName: "Plante Comigo",
     type: "website",
     locale: "pt_BR",
+    images: [
+      {
+        url: "/og-image.jpg", 
+        width: 1200,
+        height: 630,
+        alt: "Plante Comigo — Paisagismo & Design Verde",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Plante Comigo — Paisagismo & Design Verde",
+    description: "Um projeto paisagístico não muda apenas o espaço. Muda a forma como você vive dentro dele.",
+    images: ["/og-image.jpg"],
   },
 };
 

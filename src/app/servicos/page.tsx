@@ -14,7 +14,7 @@ const detailedPhases = [
     title: "Criação e Planejamento",
     subtitle: "A fundação do seu novo espaço",
     desc: "Tudo começa com a escuta. Entendemos seus desejos, necessidades e a vocação natural do seu ambiente. Realizamos um levantamento topográfico e botânico completo, desenhando um projeto que alinha a estética premium com a funcionalidade real do dia a dia. Nenhum detalhe é deixado ao acaso.",
-    image: "/plantacriacao2.jpeg",
+    image: "/plantacriacao3.jpeg",
     // Adicionamos o caminho do PDF aqui. Certifique-se de colocar o arquivo na pasta /public
     pdfPath: "/planta-projeto.pdf", 
   },
@@ -24,7 +24,7 @@ const detailedPhases = [
     title: "Seleção de Fornecedores",
     subtitle: "A busca pela excelência",
     desc: "A beleza de um jardim depende diretamente da qualidade de suas raízes e materiais. Temos uma rede de fornecedores homologados e viveiros exclusivos. Selecionamos rigorosamente as espécies botânicas mais saudáveis, os vasos mais elegantes e os substratos mais ricos, garantindo um resultado final impecável.",
-    image: "/fornecedores.jpeg",
+    image: "/fornecedores2.jpeg",
   },
   {
     id: "implantacao",
@@ -187,16 +187,43 @@ export default function ServicosPage() {
         </section>
 
         {/* CTA SECTION */}
-        <section className="bg-moss py-24 px-8 text-center flex flex-col items-center">
-          <h2 className="font-cormorant text-ice text-4xl md:text-5xl font-light mb-6">
-            Pronto para dar o próximo passo?
-          </h2>
-          <p className="font-dm font-light text-sand/70 mb-10 max-w-md mx-auto">
-            Entre em contato conosco e vamos agendar uma visita técnica sem compromisso.
-          </p>
-          <Link href="/#contato" className="px-10 py-4 bg-transparent border border-sand/30 text-sand font-dm text-[0.62rem] font-normal tracking-[0.22em] uppercase hover:bg-olive hover:border-olive hover:text-ice transition-all duration-400">
-            Iniciar Projeto
-          </Link>
+        <section className="bg-moss py-32 md:py-40 px-8 relative overflow-hidden flex flex-col items-center text-center">
+          {/* Linha decorativa sutil no topo */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1px] h-24 bg-gradient-to-b from-transparent to-sand/20" />
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            className="max-w-4xl mx-auto flex flex-col items-center"
+          >
+            {/* Pré-título para dar contexto */}
+            <span className="text-[0.62rem] tracking-[0.3em] uppercase text-sand/50 font-dm font-normal mb-8">
+              O seu novo ambiente
+            </span>
+
+            <h2 className="font-cormorant text-ice text-[2.2rem] md:text-5xl lg:text-6xl font-light mb-8 max-w-4xl leading-[1.15]">
+              Um projeto paisagístico não muda apenas o espaço.<br className="hidden md:block" />
+              Muda a forma como você <em className="italic text-sand/90">vive</em> dentro dele.
+            </h2>
+
+            <p className="font-dm font-light text-ice/60 mb-14 max-w-lg mx-auto leading-[1.9] text-[0.9rem]">
+              Conte pra gente o que você imagina — nós criamos ambientes exclusivos, naturais e cheios de vida.
+            </p>
+
+            <Link
+              href="/#contato"
+              className="group relative inline-flex items-center justify-center px-10 py-5 bg-transparent border border-sand/30 text-sand font-dm text-[0.65rem] font-normal tracking-[0.22em] uppercase overflow-hidden transition-all duration-500"
+            >
+              {/* Efeito de fundo que sobe ao passar o mouse */}
+              <div className="absolute inset-0 bg-sand transform scale-y-0 origin-bottom transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-y-100" />
+              
+              <span className="relative z-10 group-hover:text-moss transition-colors duration-500">
+                Agendar uma visita
+              </span>
+            </Link>
+          </motion.div>
         </section>
       </main>
       <Footer />
