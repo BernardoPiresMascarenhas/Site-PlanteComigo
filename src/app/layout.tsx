@@ -20,7 +20,7 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.plantecomigo.com"),
   
-  title: "Plante Comigo — Paisagismo & Design Verde",
+  title: "Plante Comigo — Paisagismo & Revitalização Ambiental",
   description: "A Plante Comigo é especialista em criar e cuidar de jardins. Projetos exclusivos e realizados sob medida — do plantio à manutenção. Belo Horizonte, MG.",
   keywords: "paisagismo, jardinagem, jardins internos, manutenção de jardins, Belo Horizonte, Automóvel Club, Casacor",
   

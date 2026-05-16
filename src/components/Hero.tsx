@@ -60,7 +60,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           // AJUSTE DE CONTRASTE: Mudei para font-medium e adicionei drop-shadow
-          className="text-[0.62rem] tracking-[0.3em] uppercase text-sand mb-6 font-dm font-medium drop-shadow-md"
+          className="text-[0.70rem] tracking-[0.3em] uppercase text-sand mb-6 font-dm font-medium drop-shadow-md"
         >
           Paisagismo · Design · Natureza
         </motion.p>

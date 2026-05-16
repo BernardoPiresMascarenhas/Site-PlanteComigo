@@ -128,7 +128,7 @@ export const projects: Project[] = [
   
   {
     slug: "casa-retiro-do-chale",
-    num: "06",
+    num: "05",
     title: "Casa Retiro do Chalé",
     category: "Projeto paisagístico em residência",
     year: "2022",
@@ -154,7 +154,7 @@ export const projects: Project[] = [
   },
   {
     slug: "casa-passargada",
-    num: "07",
+    num: "06",
     title: "Casa Passargada",
     category: "Projeto paisagístico em residência",
     year: "2024",
@@ -180,7 +180,7 @@ export const projects: Project[] = [
   },
   {
     slug: "guaja-casa",
-    num: "08",
+    num: "07",
     title: "GUAJA Casa",
     category: "Projeto paisagístico em área comercial",
     year: "2021",
@@ -206,7 +206,7 @@ export const projects: Project[] = [
   },
   {
     slug: "casa-glaura",
-    num: "09",
+    num: "08",
     title: "Casa Glaura",
     category: "Projeto paisagístico em residência",
     year: "2022",
@@ -232,7 +232,7 @@ export const projects: Project[] = [
   },
   {
     slug: "area-privativa-savassi",
-    num: "10",
+    num: "09",
     title: "Área Privativa Savassi",
     category: "Projeto paisagístico em residência",
     year: "2023",
@@ -258,7 +258,7 @@ export const projects: Project[] = [
   },
   {
     slug: "casa-retiro-das-pedras",
-    num: "11",
+    num: "10",
     title: "Casa Retiro das Pedras",
     category: "Projeto paisagístico em residência",
     year: "2024",
@@ -284,7 +284,7 @@ export const projects: Project[] = [
   },
   {
     slug: "casa-bandeirantes",
-    num: "12",
+    num: "11",
     title: "Casa Bandeirantes",
     category: "Projeto paisagístico em residência",
     year: "2022",
@@ -310,7 +310,7 @@ export const projects: Project[] = [
   },
   {
     slug: "apartamento-serra",
-    num: "13",
+    num: "12",
     title: "Apartamento Serra",
     category: "Projeto paisagístico em residência",
     year: "2023",

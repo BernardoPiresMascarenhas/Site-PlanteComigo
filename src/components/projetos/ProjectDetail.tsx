@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { staggerContainerVariants, fadeUpChildVariants } from "@/lib/animations";
-import { Project, getAdjacentProjects } from "@/lib/projects-data";
+import { Project, getAdjacentProjects, projects } from "@/lib/projects-data";
 import BlurredHero from "@/components/projetos/BlurredHero";
 
 function ParallaxImage({
@@ -162,15 +162,15 @@ export default function ProjectDetail({ project }: { project: Project }) {
       <section className="bg-cream border-b border-olive/10">
         <div className="max-w-[1300px] mx-auto px-8 md:px-12 py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
           <div>
-            <span className="block text-[0.58rem] tracking-[0.22em] uppercase text-warm-gray/50 font-dm font-light mb-1.5">
+            <span className="block text-[0.60rem] tracking-[0.22em] uppercase text-warm-gray/80 font-dm font-normal mb-1.5">
               Projeto
             </span>
             <span className="text-[0.88rem] font-dm font-light text-charcoal">
-              {project.num} / {String(project.num).padStart(2, "0")}
+              {String(project.num).padStart(2, "0")} / {String(projects.length).padStart(2, "0")}
             </span>
           </div>
           <div>
-            <span className="block text-[0.58rem] tracking-[0.22em] uppercase text-warm-gray/50 font-dm font-light mb-1.5">
+            <span className="block text-[0.60rem] tracking-[0.22em] uppercase text-warm-gray/80 font-dm font-normal mb-1.5">
               Categoria
             </span>
             <span className="text-[0.88rem] font-dm font-light text-charcoal">
@@ -178,7 +178,7 @@ export default function ProjectDetail({ project }: { project: Project }) {
             </span>
           </div>
           <div>
-            <span className="block text-[0.58rem] tracking-[0.22em] uppercase text-warm-gray/50 font-dm font-light mb-1.5">
+            <span className="block text-[0.60rem] tracking-[0.22em] uppercase text-warm-gray/80 font-dm font-normal mb-1.5">
               Serviços
             </span>
             <span className="text-[0.88rem] font-dm font-light text-charcoal">
@@ -186,7 +186,7 @@ export default function ProjectDetail({ project }: { project: Project }) {
             </span>
           </div>
           <div>
-            <span className="block text-[0.58rem] tracking-[0.22em] uppercase text-warm-gray/50 font-dm font-light mb-1.5">
+            <span className="block text-[0.60rem] tracking-[0.22em] uppercase text-warm-gray/80 font-dm font-normal mb-1.5">
               Ano
             </span>
             <span className="text-[0.88rem] font-dm font-light text-charcoal">
@@ -208,14 +208,14 @@ export default function ProjectDetail({ project }: { project: Project }) {
           <motion.div variants={fadeUpChildVariants} className="md:col-span-4">
             <div className="sticky top-32">
               <div className="w-8 h-px bg-olive mb-8" />
-              <p className="text-[0.6rem] tracking-[0.28em] uppercase text-sage font-dm font-light mb-4">
+              <p className="text-[0.75rem] tracking-[0.28em] uppercase text-sage font-dm font-light mb-4">
                 Sobre o projeto
               </p>
               <div className="flex flex-wrap gap-2 mt-6">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-[0.55rem] tracking-[0.15em] uppercase text-olive/70 border border-olive/20 px-3 py-1 font-dm font-light"
+                    className="text-[0.70rem] tracking-[0.15em] uppercase text-olive/70 border border-olive/20 px-3 py-1 font-dm font-light"
                   >
                     {tag}
                   </span>
@@ -402,7 +402,7 @@ export default function ProjectDetail({ project }: { project: Project }) {
               >
                 <em>"{project.quote}"</em>
               </p>
-              <span className="block mt-4 text-[0.58rem] tracking-[0.22em] uppercase text-warm-gray/40 font-dm font-light">
+              <span className="block mt-4 text-[0.65rem] tracking-[0.22em] uppercase text-warm-gray/80 font-dm font-normal">
                 Plante Comigo
               </span>
             </div>
@@ -420,7 +420,7 @@ export default function ProjectDetail({ project }: { project: Project }) {
                 href={`/projetos/${prev.slug}`}
                 className="group block px-8 md:px-12 py-12 hover:bg-white/[0.02] transition-colors duration-300"
               >
-                <span className="block text-[0.58rem] tracking-[0.22em] uppercase text-sand/30 font-dm font-light mb-3">
+                <span className="block text-[0.65rem] tracking-[0.22em] uppercase text-sand/30 font-dm font-light mb-3">
                   ← Projeto anterior
                 </span>
                 <span
@@ -456,7 +456,7 @@ export default function ProjectDetail({ project }: { project: Project }) {
                 href={`/projetos/${next.slug}`}
                 className="group block px-8 md:px-12 py-12 text-right hover:bg-white/[0.02] transition-colors duration-300"
               >
-                <span className="block text-[0.58rem] tracking-[0.22em] uppercase text-sand/30 font-dm font-light mb-3">
+                <span className="block text-[0.65rem] tracking-[0.22em] uppercase text-sand/30 font-dm font-light mb-3">
                   Próximo projeto →
                 </span>
                 <span
