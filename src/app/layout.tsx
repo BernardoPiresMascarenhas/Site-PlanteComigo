@@ -18,7 +18,6 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  // ADICIONE ESSA LINHA AQUI EM CIMA:
   metadataBase: new URL("https://www.plantecomigo.com"),
   
   title: "Plante Comigo — Paisagismo & Design Verde",
@@ -34,8 +33,7 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     images: [
       {
-        // PODE COLOCAR O LINK COMPLETO AQUI POR GARANTIA:
-        url: "https://www.plantecomigo.com/og-image.jpg", 
+        url: "https://www.plantecomigo.com/og-image.jpeg", 
         width: 1200,
         height: 630,
         alt: "Plante Comigo — Paisagismo & Design Verde",
@@ -46,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Plante Comigo — Paisagismo & Design Verde",
     description: "Um projeto paisagístico não muda apenas o espaço. Muda a forma como você vive dentro dele.",
-    images: ["https://www.plantecomigo.com/og-image.jpg"],
+    images: ["https://www.plantecomigo.com/og-image.jpeg"],
   },
 };
 
