@@ -46,8 +46,11 @@ export default function Hero() {
           sizes="100vw"
         />
 
-        {/* Gradient overlays */}
-        <div className="absolute inset-0 bg-gradient-to-b from-dark/30 via-dark/10 to-dark/60" />
+        {/* 1. OVERLAY GERAL: Escurece a foto inteira por igual (Ajuste o 40 para mais ou menos escuro) */}
+        <div className="absolute inset-0 bg-black/40" />
+
+        {/* 2. GRADIENTE: Escurece ainda mais as pontas e a base para o texto brilhar */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70" />
       </motion.div>
 
       {/* Content */}
