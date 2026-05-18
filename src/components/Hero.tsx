@@ -62,7 +62,7 @@ export default function Hero() {
           // AJUSTE DE CONTRASTE: Mudei para font-medium e adicionei drop-shadow
           className="text-[0.70rem] tracking-[0.3em] uppercase text-sand mb-6 font-dm font-medium drop-shadow-md"
         >
-          Paisagismo · Design · Natureza
+          Paisagismo · Bem estar · Natureza
         </motion.p>
 
         <motion.h1
@@ -72,7 +72,7 @@ export default function Hero() {
           className="font-cormorant font-light text-ice leading-[1.05] tracking-[-0.01em] mb-8"
           style={{ fontSize: "clamp(3rem, 6vw, 5.5rem)" }}
         >
-          Transformando espaços<br />
+          Transformando sua vida
           através da{" "}
           {/* AJUSTE DE CONTRASTE: Mudei para font-medium e adicionei drop-shadow */}
           <em className="italic text-sand font-medium drop-shadow-md">natureza.</em>
@@ -85,8 +85,7 @@ export default function Hero() {
           // AJUSTE DE CONTRASTE: Mudei a cor para branco puro (text-white) e a fonte para normal
           className="font-dm font-normal text-white text-[0.9rem] leading-[1.85] max-w-md mb-12 tracking-wide drop-shadow-sm"
         >
-          Criamos ambientes que respiram vida — unindo arquitetura contemporânea,
-          natureza e design minimalista em projetos únicos.
+          Criamos paisagens que respiram e trazem conexão - unindo arquitetura contemporânea, design biofilico e a naturalidade brasileira
         </motion.p>
 
         <motion.div
@@ -102,7 +101,7 @@ export default function Hero() {
             Conheça nossos projetos
           </Link>
           <Link
-            href="#contato"
+            href="https://wa.me/5531999576263"
             className="inline-flex items-center gap-3 px-8 py-4 bg-transparent text-ice font-dm text-[0.7rem] font-normal tracking-[0.18em] uppercase border border-ice/40 hover:border-ice hover:bg-ice/8 transition-all duration-400"
           >
             Fale conosco
