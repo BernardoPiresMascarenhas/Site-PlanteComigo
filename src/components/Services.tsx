@@ -73,7 +73,7 @@ export default function Services() {
               transition={{ duration: 0.7 }}
               className="text-[0.75rem] tracking-[0.3em] uppercase text-sage font-dm font-normal mb-3"
             >
-              As quatro fases de um projeto paisagístico
+              As quatro etapas de um projeto paisagístico
             </motion.p>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -84,23 +84,11 @@ export default function Services() {
               style={{ fontSize: "clamp(2.2rem, 4vw, 3.8rem)" }}
             >
               Criação, fornecedores,{" "}
-              <em className="italic text-olive">implantação</em>
-              <br />
+              <em className="italic text-olive">implantação </em>
+              
               e manutenção.
             </motion.h2>
           </div>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-[0.9rem] font-dm font-light text-warm-gray leading-[1.9]"
-          >
-            A Plante Comigo também realiza cada uma dessas etapas individualmente.
-            Seja criar um paisagismo, implantar novas espécies ou fazer a manutenção
-            do seu jardim — podemos te ajudar a chegar em ótimas escolhas e resultados.
-          </motion.p>
         </div>
 
         {/* Phases grid */}

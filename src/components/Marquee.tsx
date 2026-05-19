@@ -5,11 +5,13 @@ import Image from "next/image"; // Não esqueça de importar a Imagem
 
 const items = [
   "Paisagismo contemporâneo",
-  "Design verde",
-  "Jardins internos",
-  "Consultoria personalizada",
-  "Manutenção especializada",
-  "Arquitetura viva",
+  "Biodiversidade",
+  "Design biofísico" ,
+  "Biomas brasileiros",
+  "Arquitetura e urbanismo",
+  "Ecologia urbana",
+  "Conforto ambiental", 
+  "Paisagem e permanência",
 ];
 
 export default function Marquee() {
