@@ -88,10 +88,10 @@ export default function Contact() {
 
           <motion.h2
             variants={fadeUpChildVariants}
-            className="font-cormorant font-light text-ice leading-[1.15]"
-            style={{ fontSize: "clamp(2rem, 3.5vw, 3.2rem)" }}
+            className="font-cormorant font-light text-ice tracking-[-0.01em] leading-[1.15] w-full"
+            style={{ fontSize: "clamp(1.6rem, 2.5vw, 2.4rem)" }}
           >
-            Nossa missão é levar o <em className="italic text-sand/80">verde</em>{" "}
+            Nossa missão é levar o <em className="italic text-sand/80 font-normal">verde</em>{" "}
             até você.
           </motion.h2>
 

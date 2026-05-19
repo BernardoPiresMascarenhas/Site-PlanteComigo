@@ -97,11 +97,11 @@ export default function InstagramFeed() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="font-cormorant font-light text-charcoal leading-[1.1]"
-          style={{ fontSize: "clamp(2.2rem, 4vw, 3.8rem)" }}
+          className="font-cormorant font-light text-charcoal tracking-[-0.01em] leading-[1.15] w-full"
+          style={{ fontSize: "clamp(1.6rem, 2.5vw, 2.4rem)" }}
         >
           Natureza em{" "}
-          <em className="italic text-olive">movimento.</em>
+          <em className="italic text-olive font-normal">movimento.</em>
         </motion.h2>
 
         <motion.div

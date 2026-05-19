@@ -75,16 +75,16 @@ export default function About() {
 
             <motion.h2
               variants={fadeUpChildVariants}
-              className="font-cormorant font-light text-charcoal tracking-[-0.01em] leading-[1.1] mb-8"
-              style={{ fontSize: "clamp(2.2rem, 4vw, 3.8rem)" }}
+              className="font-cormorant font-light text-charcoal tracking-[-0.01em] leading-[1.15] mb-8 w-full"
+              style={{ fontSize: "clamp(1.6rem, 2.5vw, 2.4rem)" }}
             >
-              O equilíbrio entre o espaço urbano e um ambiente{" "}
-              <em className="italic text-olive">sustentável.</em>
+              O equilíbrio entre o espaço urbano<br className="hidden md:block" />
+              e um ambiente <em className="italic text-olive font-normal">sustentável.</em>
             </motion.h2>
 
             <motion.p
               variants={fadeUpChildVariants}
-              className="text-[0.9rem] font-dm font-light text-warm-gray leading-[1.9] max-w-[460px] mb-10"
+              className="text-[0.9rem] font-dm font-light text-warm-gray leading-[1.9] w-full text-justify mb-10"
             >
               A Plante Comigo transforma natureza em experiência. Arquiteto, paisagista e apaixonado pela natureza, Francisco (Chico) está a frente de cada projeto, unindo sofisticação, biodiversidade e sensibilidade. Assim, criamos espaços exclusivos, onde espécies nativas e ornamentais convivem em equilíbrio, trazendo vida, identidade e conexão para cada ambiente.
             </motion.p>

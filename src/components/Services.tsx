@@ -8,22 +8,22 @@ const phases = [
   {
     num: "01",
     name: "Criação",
-    desc: "Estudo inicial do projeto: conservamos o espaço, fazemos um levantamento completo, desenho e planejamento considerando todos os fatores importantes.",
+    desc: "Cada projeto nasce da leitura sensível do espaço e da conexão entre arquitetura, natureza e estilo de vida. Desenvolvemos soluções exclusivas, pensadas para transformar ambientes em experiências vivas, funcionais e cheias de personalidade.",
   },
   {
     num: "02",
     name: "Fornecedores",
-    desc: "Seleção rigorosa dos melhores materiais, espécies botânicas e adornos do mercado, garantindo a qualidade premium para o seu espaço.",
+    desc: "Trabalhamos com parceiros selecionados, priorizando qualidade e confiança. Das espécies aos acabamentos, tudo é escolhido com cuidado para garantir autenticidade e excelência ao projeto.",
   },
   {
     num: "03",
     name: "Implantação",
-    desc: "Com a presença da nossa equipe e de todos os materiais necessários, iniciamos a implantação do projeto com prazo definido e total previsibilidade.",
+    desc: "Acompanhamos cada etapa da implantação  para que o projeto saia do papel exatamente como foi idealizado. Organização, atenção aos detalhes e compromisso com o resultado fazem parte de todo o processo.",
   },
   {
     num: "04",
     name: "Manutenção",
-    desc: "A manutenção envolve o cuidado e o tratamento das plantas para mantê-las saudáveis e belas. Uma área bem cuidada pede uma manutenção cíclica.",
+    desc: "Um jardim precisa evoluir com o tempo sem perder sua essência. A manutenção preserva a beleza, a saúde e o equilíbrio ideal para as plantas, garantindo que cada espaço continue vivo e exuberante.",
   },
 ];
 
@@ -80,12 +80,11 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="font-cormorant font-light text-charcoal leading-[1.1] tracking-[-0.01em]"
-              style={{ fontSize: "clamp(2.2rem, 4vw, 3.8rem)" }}
+              className="font-cormorant font-light text-charcoal tracking-[-0.01em] leading-[1.15] w-full"
+              style={{ fontSize: "clamp(1.6rem, 2.5vw, 2.4rem)" }}
             >
               Criação, fornecedores,{" "}
-              <em className="italic text-olive">implantação </em>
-              
+              <em className="italic text-olive font-normal">implantação </em>
               e manutenção.
             </motion.h2>
           </div>

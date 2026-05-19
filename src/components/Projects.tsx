@@ -80,11 +80,11 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="font-cormorant font-light text-ice leading-[1.1]"
-              style={{ fontSize: "clamp(2.2rem, 4vw, 3.8rem)" }}
+              className="font-cormorant font-light text-ice tracking-[-0.01em] leading-[1.15] w-full"
+              style={{ fontSize: "clamp(1.6rem, 2.5vw, 2.4rem)" }}
             >
               Projetos que{" "}
-              <em className="italic text-sand/80">inspiram.</em>
+              <em className="italic text-sand/80 font-normal">inspiram.</em>
             </motion.h2>
           </div>
 
