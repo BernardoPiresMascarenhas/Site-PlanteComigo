@@ -6,7 +6,7 @@ import Image from "next/image"; // Não esqueça de importar a Imagem
 const items = [
   "Paisagismo contemporâneo",
   "Biodiversidade",
-  "Design biofísico" ,
+  "Design BIOFíLICO" ,
   "Biomas brasileiros",
   "Arquitetura e urbanismo",
   "Ecologia urbana",

@@ -86,7 +86,7 @@ export default function About() {
               variants={fadeUpChildVariants}
               className="text-[0.9rem] font-dm font-light text-warm-gray leading-[1.9] w-full text-justify mb-10"
             >
-              A Plante Comigo transforma natureza em experiência. Arquiteto, paisagista e apaixonado pela natureza, Francisco (Chico) está a frente de cada projeto, unindo sofisticação, biodiversidade e sensibilidade. Assim, criamos espaços exclusivos, onde espécies nativas e ornamentais convivem em equilíbrio, trazendo vida, identidade e conexão para cada ambiente.
+              A Plante Comigo, transforma paisagismo em experiências vivas. Sob a curadoria detalhada do arquiteto e paisagista Chico, cada projeto é assinado com foco em sofisticação, elegância e autenticidade, buscando sempre valorizar a nossa biodiversidade nativa. Nossa missão é criar refúgios exclusivos onde espécies brasileiras e ornamentais, se encontram em perfeito equilíbrio, trazendo mais vida, conexão e permanência para cada ambiente.
             </motion.p>
 
             {/* Pillars */}
