@@ -34,7 +34,7 @@ export default function Differentials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="text-[0.75rem] tracking-[0.3em] uppercase text-sage font-dm font-normal mb-3"
+            className="text-[0.65rem] tracking-[0.3em] uppercase text-sage font-dm font-normal mb-3"
           >
             Por que escolher
           </motion.p>
@@ -44,7 +44,7 @@ export default function Differentials() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
             className="font-cormorant font-light text-charcoal tracking-[-0.01em] leading-[1.15] w-full"
-            style={{ fontSize: "clamp(1.6rem, 2.5vw, 2.4rem)" }}
+            style={{ fontSize: "clamp(1.7rem, 2.5vw, 2.8rem)" }}
           >
             A experiência{" "}
             <em className="italic text-olive font-normal">Plante Comigo.</em>
