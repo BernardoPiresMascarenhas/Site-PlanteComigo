@@ -5,20 +5,20 @@ import { staggerContainerVariants, fadeUpChildVariants } from "@/lib/animations"
 
 const differentials = [
   {
-    title: "Projetos sob medida",
-    text: "Cada projeto é exclusivo e criado a partir da sua necessidade — sem soluções genéricas, apenas o que faz sentido para o seu espaço.",
+    title: "Projetos autorais",
+    text: "Cada projeto nasce da leitura do seu espaço, da sua rotina e da atmosfera que você deseja viver. Criamos soluções exclusivas, pensadas para integrar estética, funcionalidade e natureza de forma autêntica.",
   },
   {
-    title: "Equipe capacitada",
-    text: "Nossa equipe realiza a execução com prazo definido, oferecendo previsibilidade sobre o início e o término da implantação.",
+    title: "Equipe especializada",
+    text: "Contamos com uma equipe qualificada e alinhada em cada etapa da execução, garantindo organização, cuidado técnico e cumprimento dos prazos definidos. Acompanhamos todo o processo para que a implantação aconteça com segurança, clareza e excelência nos detalhes.",
   },
   {
-    title: "Confiabilidade",
-    text: "Há 8 anos no mercado oferecendo o melhor dos nossos conhecimentos e prestando um serviço de confiança para cada cliente.",
+    title: "Confiança construída com experiência",
+    text: "Há 8 anos desenvolvendo projetos paisagísticos, unimos conhecimento técnico, sensibilidade estética e compromisso com cada cliente. Trabalhamos com transparência, responsabilidade e atenção em cada decisão, criando admiração e uma relações de confiança.",
   },
   {
-    title: "Melhores fornecedores",
-    text: "Temos acesso às melhores espécies e adornos do mercado para garantir qualidade e variedade em cada composição.",
+    title: "Curadoria dos melhores fornecedores",
+    text: "Selecionamos fornecedores e espécies com alto padrão de qualidade para garantir beleza, durabilidade e identidade em cada composição. Cada elemento é escolhido com critério para assegurar um resultado sofisticado, saudável e harmônico ao longo do tempo.",
   },
 ];
 
@@ -34,7 +34,7 @@ export default function Differentials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="text-[0.75rem] tracking-[0.3em] uppercase text-sage font-dm font-light mb-3"
+            className="text-[0.75rem] tracking-[0.3em] uppercase text-sage font-dm font-normal mb-3"
           >
             Por que escolher
           </motion.p>
@@ -47,25 +47,25 @@ export default function Differentials() {
             style={{ fontSize: "clamp(1.6rem, 2.5vw, 2.4rem)" }}
           >
             A experiência{" "}
-            <em className="italic text-olive font-normal">PlanteComigo.</em>
+            <em className="italic text-olive font-normal">Plante Comigo.</em>
           </motion.h2>
         </div>
 
-        {/* Grid */}
+        {/* Grid ajustado para 2 colunas e espaçamento otimizado */}
         <motion.div
           variants={staggerContainerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12"
+          className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-14"
         >
           {differentials.map((item) => (
             <motion.div key={item.title} variants={fadeUpChildVariants}>
-              <div className="w-8 h-px bg-olive mb-8" />
-              <h4 className="font-cormorant font-light text-[1.3rem] text-charcoal mb-3 leading-snug">
+              <div className="w-8 h-px bg-olive/60 mb-6" />
+              <h4 className="font-cormorant font-normal text-[1.4rem] text-charcoal mb-4 leading-snug">
                 {item.title}
               </h4>
-              <p className="text-[0.82rem] font-dm font-light text-warm-gray leading-[1.9]">
+              <p className="text-[0.88rem] font-dm font-light text-warm-gray leading-[1.9] text-justify max-w-[520px]">
                 {item.text}
               </p>
             </motion.div>

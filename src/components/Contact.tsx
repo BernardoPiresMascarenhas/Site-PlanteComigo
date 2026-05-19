@@ -81,7 +81,7 @@ export default function Contact() {
         >
           <motion.p
             variants={fadeUpChildVariants}
-            className="text-[0.75rem] tracking-[0.3em] uppercase text-sand/50 font-dm font-light mb-4"
+            className="text-[0.65rem] tracking-[0.3em] uppercase text-sand/50 font-dm font-light mb-4"
           >
             Vamos conversar
           </motion.p>
@@ -89,7 +89,7 @@ export default function Contact() {
           <motion.h2
             variants={fadeUpChildVariants}
             className="font-cormorant font-light text-ice tracking-[-0.01em] leading-[1.15] w-full"
-            style={{ fontSize: "clamp(1.6rem, 2.5vw, 2.4rem)" }}
+            style={{ fontSize: "clamp(1.7rem, 2.5vw, 2.8rem)" }}
           >
             Nossa missão é levar o <em className="italic text-sand/80 font-normal">verde</em>{" "}
             até você.

@@ -71,7 +71,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="text-[0.75rem] tracking-[0.3em] uppercase text-sand/60 font-dm font-light mb-3"
+              className="text-[0.65rem] tracking-[0.3em] uppercase text-sand/60 font-dm font-light mb-3"
             >
               Portfólio
             </motion.p>
@@ -81,7 +81,7 @@ export default function Projects() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 }}
               className="font-cormorant font-light text-ice tracking-[-0.01em] leading-[1.15] w-full"
-              style={{ fontSize: "clamp(1.6rem, 2.5vw, 2.4rem)" }}
+              style={{ fontSize: "clamp(1.7rem, 2.5vw, 2.8rem)" }}
             >
               Projetos que{" "}
               <em className="italic text-sand/80 font-normal">inspiram.</em>

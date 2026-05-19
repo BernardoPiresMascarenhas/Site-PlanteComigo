@@ -88,7 +88,7 @@ export default function InstagramFeed() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-[0.75rem] tracking-[0.3em] uppercase text-sage font-dm font-light mb-3"
+          className="text-[0.65rem] tracking-[0.3em] uppercase text-sage font-dm font-light mb-3"
         >
           Siga nossa jornada
         </motion.p>
@@ -98,7 +98,7 @@ export default function InstagramFeed() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.1 }}
           className="font-cormorant font-light text-charcoal tracking-[-0.01em] leading-[1.15] w-full"
-          style={{ fontSize: "clamp(1.6rem, 2.5vw, 2.4rem)" }}
+          style={{ fontSize: "clamp(1.7rem, 2.5vw, 2.8rem)" }}
         >
           Natureza em{" "}
           <em className="italic text-olive font-normal">movimento.</em>
@@ -114,7 +114,7 @@ export default function InstagramFeed() {
             href="https://instagram.com/plantecomigo"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-[0.75rem] tracking-[0.2em] uppercase text-olive mt-4 hover:text-moss transition-colors font-dm font-light"
+            className="inline-flex items-center gap-2 text-[0.65rem] tracking-[0.2em] uppercase text-olive mt-4 hover:text-moss transition-colors font-dm font-light"
           >
             @plantecomigo
           </Link>

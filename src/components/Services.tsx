@@ -71,9 +71,9 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="text-[0.75rem] tracking-[0.3em] uppercase text-sage font-dm font-normal mb-3"
+              className="text-[0.65rem] tracking-[0.3em] uppercase text-sage font-dm font-normal mb-3"
             >
-              As quatro etapas de um projeto paisagístico
+              Etapas de um projeto paisagístico
             </motion.p>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -81,7 +81,7 @@ export default function Services() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 }}
               className="font-cormorant font-light text-charcoal tracking-[-0.01em] leading-[1.15] w-full"
-              style={{ fontSize: "clamp(1.6rem, 2.5vw, 2.4rem)" }}
+              style={{ fontSize: "clamp(1.7rem, 2.5vw, 2.8rem)" }}
             >
               Criação, fornecedores,{" "}
               <em className="italic text-olive font-normal">implantação </em>
