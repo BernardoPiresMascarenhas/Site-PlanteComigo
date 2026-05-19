@@ -47,7 +47,7 @@ export default function Hero() {
         />
 
         {/* 1. OVERLAY GERAL: Escurece a foto inteira por igual (Ajuste o 40 para mais ou menos escuro) */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/30" />
 
         {/* 2. GRADIENTE: Escurece ainda mais as pontas e a base para o texto brilhar */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70" />
@@ -65,7 +65,7 @@ export default function Hero() {
           // AJUSTE DE CONTRASTE: Mudei para font-medium e adicionei drop-shadow
           className="text-[0.70rem] tracking-[0.3em] uppercase text-sand mb-6 font-dm font-medium drop-shadow-md"
         >
-          Paisagismo · Bem estar · Natureza
+          Paisagismo · Bem estar · Arquitetura
         </motion.p>
 
         <motion.h1
@@ -75,8 +75,7 @@ export default function Hero() {
           className="font-cormorant font-light text-ice leading-[1.05] tracking-[-0.01em] mb-8"
           style={{ fontSize: "clamp(3rem, 6vw, 5.5rem)" }}
         >
-          Transformando sua vida
-          através da{" "}
+          Vida através da {" "}
           {/* AJUSTE DE CONTRASTE: Mudei para font-medium e adicionei drop-shadow */}
           <em className="italic text-sand font-medium drop-shadow-md">natureza.</em>
         </motion.h1>
@@ -88,7 +87,7 @@ export default function Hero() {
           // AJUSTE DE CONTRASTE: Mudei a cor para branco puro (text-white) e a fonte para normal
           className="font-dm font-normal text-white text-[0.9rem] leading-[1.85] max-w-md mb-12 tracking-wide drop-shadow-sm"
         >
-          Criamos paisagens que respiram e trazem conexão - unindo arquitetura contemporânea, design biofilico e a naturalidade brasileira
+          Paisagens que respiram e trazem conexão, unindo arquitetura contemporânea, design biofilico e naturalidade brasileira
         </motion.p>
 
         <motion.div

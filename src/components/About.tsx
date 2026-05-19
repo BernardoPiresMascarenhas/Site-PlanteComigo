@@ -14,19 +14,19 @@ const stats = [
 const pillars = [
   {
     label: "Projeto",
-    text: "Projetos exclusivos e realizados sob medida a partir da sua necessidade.",
+    text: "Projetos exclusivos, desenhados para a sua forma de viver.",
   },
   {
     label: "Do plantio à manutenção",
-    text: "Especialistas em criar e cuidar de jardins. Uma área bem cuidada pede uma manutenção cíclica.",
+    text: "Cuidamos de cada detalhe para que seu jardim cresça saudável e vigoroso.",
   },
   {
     label: "Desenvolvimento",
-    text: "Equipe preparada e capacitada, com prazo informado no projeto para total previsibilidade da implantação.",
+    text: "Execução planejada com precisão, transparência e previsibilidade.",
   },
   {
     label: "Fornecedores",
-    text: "Acesso às melhores espécies e adornos do mercado para compor o seu projeto.",
+    text: "Seleção criteriosa para resultados extraordinários.",
   },
 ];
 
@@ -86,10 +86,7 @@ export default function About() {
               variants={fadeUpChildVariants}
               className="text-[0.9rem] font-dm font-light text-warm-gray leading-[1.9] max-w-[460px] mb-10"
             >
-              A Plante Comigo é uma empresa que preza não apenas pela beleza de
-              um espaço, mas também utiliza técnicas profissionais que resultam
-              em uma solução eficiente dos recursos naturais — o equilíbrio entre
-              o espaço urbano e o desenvolvimento de um ambiente sustentável.
+              A Plante Comigo transforma natureza em experiência. Arquiteto, paisagista e apaixonado pela natureza, Francisco (Chico) está a frente de cada projeto, unindo sofisticação, biodiversidade e sensibilidade. Assim, criamos espaços exclusivos, onde espécies nativas e ornamentais convivem em equilíbrio, trazendo vida, identidade e conexão para cada ambiente.
             </motion.p>
 
             {/* Pillars */}
