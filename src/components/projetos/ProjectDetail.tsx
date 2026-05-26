@@ -240,7 +240,7 @@ export default function ProjectDetail({ project }: { project: Project }) {
 
       {/* ── SCATTERED PHOTO LAYOUT ── */}
       <section className="bg-ice pb-24">
-        {/* Verifica se a foto 0 existe (sempre deve existir pelo menos 1 na base) */}
+        {/* Verifica se a foto 0 existe (Hero da galeria) */}
         {project.photos[0] && (
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -280,113 +280,66 @@ export default function ProjectDetail({ project }: { project: Project }) {
           </motion.div>
         )}
 
-        <div className="px-8 md:px-12 max-w-[1300px] mx-auto">
-          {/* ROW A: portrait offset-up + caption + landscape */}
-          <div className="grid grid-cols-12 gap-3 md:gap-4 mt-3 items-end">
-            {/* Caption */}
-            {project.photos[1] && (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, delay: 0.15 }}
-                className="col-span-12 md:col-span-2 md:col-start-1 order-last md:order-first pb-6"
-              >
-                <p className="text-[0.75rem] font-dm font-light text-warm-gray leading-[1.9] max-w-[200px]">
-                  {project.photos[1].alt}
-                </p>
-                <div className="mt-3 w-6 h-px bg-olive/30" />
-              </motion.div>
-            )}
+        {/* ── NOVO LAYOUT DE GALERIA DINÂMICA E INFINITA ── */}
+        <div className="px-8 md:px-12 max-w-[1300px] mx-auto mt-16 md:mt-24">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-y-16 md:gap-y-32 gap-x-8 items-center">
+            
+            {/* O .slice(1) garante que ele pule a Foto 0 (pois ela já foi renderizada lá em cima) e mapeie todo o resto! */}
+            {project.photos.slice(1).map((photo, index) => {
+              const isPortrait = photo.aspect === "portrait";
 
-            {/* Portrait — tall, elevated */}
-            {project.photos[1] && (
-              <motion.div
-                initial={{ opacity: 0, y: 48 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="col-span-5 md:col-span-3 md:col-start-3"
-                style={{ marginTop: "-5rem" }}
-              >
-                <div className="relative h-[280px] md:h-[440px] overflow-hidden">
-                  <ParallaxImage
-                    src={project.photos[1].src}
-                    alt={project.photos[1].alt}
-                    speed={0.13}
-                    className="absolute inset-0"
-                  />
-                </div>
-              </motion.div>
-            )}
+              // Lógica Ziguezague: Ímpar/Par para jogar a foto para a esquerda ou para a direita
+              const isEven = index % 2 === 0;
+              
+              const colSpan = isPortrait ? "md:col-span-5" : "md:col-span-7";
+              const colStart = isEven
+                ? "md:col-start-1" // Lado esquerdo
+                : isPortrait
+                  ? "md:col-start-8" // Lado direito (Retrato)
+                  : "md:col-start-6"; // Lado direito (Paisagem)
 
-            {/* Landscape — right side */}
-            {project.photos[2] && (
-              <motion.div
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, delay: 0.22, ease: [0.16, 1, 0.3, 1] }}
-                className="col-span-7 md:col-span-6 md:col-start-7 relative h-[200px] md:h-[310px] overflow-hidden"
-              >
-                <ParallaxImage
-                  src={project.photos[2].src}
-                  alt={project.photos[2].alt}
-                  speed={0.08}
-                  className="absolute inset-0"
-                />
-              </motion.div>
-            )}
-          </div>
+              // Alturas dinâmicas baseadas no formato da foto
+              const heightClass = isPortrait
+                ? "h-[400px] md:h-[650px]"
+                : "h-[250px] md:h-[450px]";
 
-          {/* ROW B: wide landscape + portrait overlapping right */}
-          {(project.photos[3] || project.photos[4]) && (
-            <div className="grid grid-cols-12 gap-3 md:gap-4 mt-3 md:mt-4 items-start">
-              {/* Wide */}
-              {project.photos[4] && (
+              // Adiciona uma margem no topo de forma alternada para criar o efeito desalinhado
+              const marginTop = isEven ? "md:mt-0" : "md:mt-20";
+
+              return (
                 <motion.div
-                  initial={{ opacity: 0, y: 28 }}
+                  key={index} // Chave única para o React não reclamar
+                  initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
-                  className="col-span-12 md:col-span-7 relative h-[240px] md:h-[400px] overflow-hidden"
+                  viewport={{ once: true, amount: 0.1 }}
+                  transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+                  className={`col-span-12 ${colSpan} ${colStart} ${marginTop}`}
                 >
-                  <ParallaxImage
-                    src={project.photos[4].src}
-                    alt={project.photos[4].alt}
-                    speed={0.09}
-                    className="absolute inset-0"
-                  />
-                </motion.div>
-              )}
-
-              {/* Portrait — slightly elevated, overlapping */}
-              {project.photos[3] && (
-                <motion.div
-                  initial={{ opacity: 0, y: 48 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                  className="col-span-8 md:col-span-4 md:col-start-9 relative h-[320px] md:h-[500px]"
-                  style={{ marginTop: "-3.5rem" }}
-                >
-                  <div className="relative h-full overflow-hidden">
+                  <div className={`relative w-full ${heightClass} overflow-hidden mb-4`}>
                     <ParallaxImage
-                      src={project.photos[3].src}
-                      alt={project.photos[3].alt}
-                      speed={0.15}
+                      src={photo.src}
+                      alt={photo.alt}
+                      speed={0.12}
                       className="absolute inset-0"
                     />
                   </div>
-                  {/* Accent corner */}
-                  <div className="absolute -bottom-5 -left-5 w-20 h-20 border border-sand/40 pointer-events-none hidden md:block" />
+                  
+                  {/* Legenda automática baseada na tag "alt" do arquivo de dados */}
+                  {photo.alt && (
+                    <div className="flex items-center gap-3">
+                      <div className="w-4 h-px bg-olive/30" />
+                      <p className="text-[0.65rem] tracking-[0.05em] uppercase text-warm-gray/60 font-dm font-light">
+                        {photo.alt}
+                      </p>
+                    </div>
+                  )}
                 </motion.div>
-              )}
-            </div>
-          )}
+              );
+            })}
+          </div>
         </div>
 
-        {/* PULL QUOTE */}
+        {/* PULL QUOTE (Citação) */}
         {project.quote && (
           <motion.div
             initial={{ opacity: 0, y: 24 }}

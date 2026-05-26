@@ -84,7 +84,6 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
-          // AJUSTE DE CONTRASTE: Mudei a cor para branco puro (text-white) e a fonte para normal
           className="font-dm font-normal text-white text-[0.9rem] leading-[1.85] max-w-md mb-12 tracking-wide drop-shadow-sm"
         >
           Paisagens que respiram e trazem conexão, unindo arquitetura contemporânea, design biofilico e naturalidade brasileira
