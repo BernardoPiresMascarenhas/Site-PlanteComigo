@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { staggerContainerVariants, fadeUpChildVariants } from "@/lib/animations";
 import { projects } from "@/lib/projects-data";
+import BlurredHero from "@/components/projetos/BlurredHero";
 
 // Featured = first project (Automóvel Club)
 const featured = projects[0];
@@ -110,19 +111,19 @@ export default function FeaturedProject() {
       <motion.div
         initial={{ opacity: 0, y: 32 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.15 }}
+        viewport={{ once: true, margin: "50px" }} // Já coloquei a margem de segurança do mobile aqui também!
         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-        className="relative w-full h-[55vw] min-h-[400px] max-h-[700px] overflow-hidden"
+        className="relative w-full h-[55vw] min-h-[400px] max-h-[700px] overflow-hidden bg-charcoal"
       >
-        <Image
+        <BlurredHero
           src={photos[0].src}
           alt={photos[0].alt}
-          fill
-          className="object-cover"
+          className="absolute inset-0"
           priority
-          sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-ice/30" />
+        
+        {/* Gradiente original mantido sobreposto (z-10) para mesclar perfeitamente com a cor de fundo bg-ice da próxima seção */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-ice/30 pointer-events-none z-10" />
       </motion.div>
 
       {/* SCATTERED LAYOUT */}
