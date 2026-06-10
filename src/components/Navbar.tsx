@@ -7,10 +7,10 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 const navLinks = [
-  { label: "Sobre", href: "#sobre" },
-  { label: "Serviços", href: "#servicos" },
-  { label: "Projetos", href: "#projetos" },
-  { label: "Contato", href: "#contato" },
+  { label: "Sobre", href: "/#sobre" },
+  { label: "Serviços", href: "/#servicos" }, 
+  { label: "Projetos", href: "/#projetos" },
+  { label: "Contato", href: "/#contato" },
 ];
 
 export default function Navbar() {

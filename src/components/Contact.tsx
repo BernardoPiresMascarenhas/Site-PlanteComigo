@@ -99,9 +99,7 @@ export default function Contact() {
             variants={fadeUpChildVariants}
             className="mt-5 text-[0.88rem] font-dm font-light text-ice/50 leading-[1.85] max-w-[340px]"
           >
-            Se você tem refletido em ir de encontro com a natureza, além de
-            valorizar o seu espaço, entre em contato — iremos te fazer uma
-            visita sem compromisso.
+            Se seu desejo vai de encontro com a natureza, além da vontade de valorizar seu espaço e sua qualidade de vida, entre em contato e agende uma visita!
           </motion.p>
 
           <motion.div

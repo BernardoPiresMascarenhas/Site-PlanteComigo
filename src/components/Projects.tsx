@@ -7,10 +7,10 @@ import { fadeUpChildVariants, staggerContainerVariants } from "@/lib/animations"
 import { projects as allProjects } from "@/lib/projects-data";
 
 const homeGridConfig: Record<string, string> = {
-  "cobertura-sion2":                "col-span-12 md:col-span-7",
-  "casa-passargada2":                 "col-span-12 md:col-span-5",
-  "casa-rio-acima":               "col-span-12 md:col-span-4",
-  "condominio-belvedere":    "col-span-12 md:col-span-8",
+  "casa-rio-acima":                "col-span-12 md:col-span-7",
+  "hospital-sao-lucas":                 "col-span-12 md:col-span-5",
+  "automovel-club":               "col-span-12 md:col-span-4",
+  "condominio-aldeia-da-cachoeira-das-pedras":    "col-span-12 md:col-span-8",
 };
 
 const projects = allProjects.slice(0, 4).map((p) => ({

@@ -51,8 +51,7 @@ export default function Footer() {
             </span>
           </Link>
           <p className="text-[0.8rem] font-dm font-light text-ice/25 leading-relaxed max-w-[240px]">
-            Transformando espaços através da natureza. Paisagismo e design verde
-            com qualidade premium.
+            Transformando sua vida através da natureza.
           </p>
         </div>
 

@@ -20,6 +20,111 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "casa-rio-acima",
+    num: "01",
+    title: "Casa Rio Acima",
+    category: "Projeto paisagístico em residência",
+    year: "2026",
+    location: "Belo Horizonte, MG",
+    services: ["Criação", "Implantação"],
+    tags: ["Residencial", "Indoor", "Curadoria"],
+    description:
+      "Elegância botânica indoor: plantas selecionadas para complementar o design de interiores.",
+    longDescription: [
+    ],
+    quote: "O rústico e o sofisticado em completa harmonia com as montanhas, respeitando a força da paisagem natural.",
+    coverSrc: "/cra00.jpeg", 
+    photos: [
+      { src: "/cra05.jpeg", alt: "Casa Rio Acima — ", aspect: "landscape" },
+      { src: "/cra02.jpeg", alt: "Casa Rio Acima — ", aspect: "portrait" },
+      { src: "/cra07.jpeg", alt: "Casa Rio Acima — ", aspect: "landscape" },
+      { src: "/cra03.jpeg", alt: "Casa Rio Acima — ", aspect: "portrait" },
+      { src: "/cra09.jpeg", alt: "Casa Rio Acima — ", aspect: "landscape" },
+      { src: "/cra01.jpeg", alt: "Casa Rio Acima — ", aspect: "portrait" },
+      { src: "/cra06.jpeg", alt: "Casa Rio Acima — ", aspect: "portrait" },
+      { src: "/cra08.jpeg", alt: "Casa Rio Acima — ", aspect: "landscape" },
+      { src: "/cra10.jpeg", alt: "Casa Rio Acima — ", aspect: "portrait" },
+      { src: "/cra11.jpeg", alt: "Casa Rio Acima — ", aspect: "portrait" },
+      { src: "/cra12.jpeg", alt: "Casa Rio Acima — ", aspect: "portrait" },
+      { src: "/cra13.jpeg", alt: "Casa Rio Acima — ", aspect: "portrait" },
+    ],
+  },
+  {
+    slug: "hospital-sao-lucas",
+    num: "02",
+    title: "Hospital São Lucas",
+    category: "Projeto paisagístico em área comercial",
+    year: "2024",
+    location: "Belo Horizonte, MG",
+    services: ["Criação", "Implementação", "Manutenção"],
+    tags: ["Comercial", "Jardim Terapêutico", "Institucional"],
+    description:
+      "A cura através da natureza: jardins terapêuticos e ambientes de acolhimento para pacientes e profissionais.",
+    longDescription: [
+      
+    ],
+    quote: "A natureza possui um poder restaurador que atua silenciosamente no bem-estar de quem a observa.",
+    coverSrc: "/hospital0.png",
+    photos: [
+      { src: "/hospital3.png", alt: "Hospital São Lucas — ", aspect: "landscape" },
+      { src: "/hospital2.png", alt: "Hospital São Lucas — ", aspect: "portrait" },
+      { src: "/hospital5.png", alt: "Hospital São Lucas — ", aspect: "landscape" },
+      { src: "/hospital4.png", alt: "Hospital São Lucas — ", aspect: "portrait" },
+      { src: "/hospital1.png", alt: "Hospital São Lucas — ", aspect: "landscape" },
+    ],
+  },
+  {
+    slug: "automovel-club",
+    num: "03",
+    title: "Automóvel Club",
+    category: "Paisagismo corporativo",
+    year: "2022",
+    location: "Belo Horizonte, MG",
+    services: ["Criação", "Implementação"],
+    tags: ["Paisagismo corporativo", "Projeto exclusivo", "Implementação"],
+    description:
+      "Um projeto que une a história e sofisticação do Automóvel Club com a linguagem contemporânea do paisagismo.",
+    longDescription: [
+      
+    ],
+    quote:
+      "O projeto buscou criar um diálogo entre o ambiente construído e a natureza — onde cada planta tem uma função estética e simbólica.",
+    coverSrc: "/auto01.png",
+    photos: [
+      { src: "/auto01.png", alt: "Automóvel Club — ", aspect: "landscape" },
+      { src: "/auto2.png", alt: "Automóvel Club — ", aspect: "portrait" },
+      { src: "/auto3.png", alt: "Automóvel Club — ", aspect: "portrait" },
+      { src: "/auto4.png", alt: "Automóvel Club — ", aspect: "portrait" },
+      { src: "/auto7.png", alt: "Automóvel Club — ", aspect: "portrait" },
+    ],
+  },
+  {
+    slug: "condominio-aldeia-da-cachoeira-das-pedras",
+    num: "04",
+    title: "Condomínio Aldeia da Cachoeira das Pedras",
+    category: "Projeto paisagístico em residência",
+    year: "2024",
+    location: "Belo Horizonte, MG",
+    services: ["Criação", "Implantação", "Manutenção"],
+    tags: ["Residencial", "Indoor", "Curadoria"],
+    description:
+      "Elegância botânica indoor: plantas selecionadas para complementar o design de interiores.",
+    longDescription: [
+          ],
+    quote: "A exuberância da mata nativa trazida para o convívio diário, celebrando a liberdade da vida ao ar livre.",
+    coverSrc: "/cacp04.jpeg",
+    photos: [
+      { src: "/cacp01.jpeg", alt: "Condomínio Aldeia da Cachoeira das Pedras — ", aspect: "landscape" },
+      { src: "/cacp02.jpeg", alt: "Condomínio Aldeia da Cachoeira das Pedras — ", aspect: "portrait" },
+      { src: "/cacp03.jpeg", alt: "Condomínio Aldeia da Cachoeira das Pedras — ", aspect: "landscape" },
+      { src: "/cacp05.jpeg", alt: "Condomínio Aldeia da Cachoeira das Pedras — ", aspect: "landscape" },
+      { src: "/cacp06.jpeg", alt: "Condomínio Aldeia da Cachoeira das Pedras — ", aspect: "portrait" },
+      { src: "/cacp07.jpeg", alt: "Condomínio Aldeia da Cachoeira das Pedras — ", aspect: "portrait" },
+      { src: "/cacp08.jpeg", alt: "Condomínio Aldeia da Cachoeira das Pedras — ", aspect: "portrait" },
+      { src: "/cacp00.jpeg", alt: "Condomínio Aldeia da Cachoeira das Pedras — ", aspect: "landscape" },
+    ],
+  },
+  {
     slug: "cobertura-sion2",
     num: "01",
     title: "Cobertura Sion",
@@ -64,28 +169,6 @@ export const projects: Project[] = [
       { src: "/cp01.jpeg", alt: "Casa Passárgada — ", aspect: "landscape" },
       { src: "/cp02.jpeg", alt: "Casa Passárgada — ", aspect: "portrait" },
       { src: "/cp03.jpeg", alt: "Casa Passárgada — ", aspect: "portrait" },
-    ],
-  },
-  {
-    slug: "casa-rio-acima",
-    num: "03",
-    title: "Casa Rio Acima",
-    category: "Projeto paisagístico em residência",
-    year: "2026",
-    location: "Belo Horizonte, MG",
-    services: ["Criação", "Implantação"],
-    tags: ["Residencial", "Indoor", "Curadoria"],
-    description:
-      "Elegância botânica indoor: plantas selecionadas para complementar o design de interiores.",
-    longDescription: [
-    ],
-    quote: "O rústico e o sofisticado em completa harmonia com as montanhas, respeitando a força da paisagem natural.",
-    coverSrc: "/cra00.jpeg", 
-    photos: [
-      { src: "/cra01.jpeg", alt: "Casa Rio Acima — ", aspect: "landscape" },
-      { src: "/cra02.jpeg", alt: "Casa Rio Acima — ", aspect: "portrait" },
-      { src: "/cra03.jpeg", alt: "Casa Rio Acima — ", aspect: "portrait" },
-      { src: "/cra04.jpeg", alt: "Casa Rio Acima — ", aspect: "portrait" },
     ],
   },
   {
@@ -267,30 +350,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "hospital-sao-lucas",
-    num: "10",
-    title: "Hospital São Lucas",
-    category: "Projeto paisagístico em área comercial",
-    year: "2024",
-    location: "Belo Horizonte, MG",
-    services: ["Criação", "Implementação", "Manutenção"],
-    tags: ["Comercial", "Jardim Terapêutico", "Institucional"],
-    description:
-      "A cura através da natureza: jardins terapêuticos e ambientes de acolhimento para pacientes e profissionais.",
-    longDescription: [
-      
-    ],
-    quote: "A natureza possui um poder restaurador que atua silenciosamente no bem-estar de quem a observa.",
-    coverSrc: "/hospital0.png",
-    photos: [
-      { src: "/hospital3.png", alt: "Hospital São Lucas — ", aspect: "landscape" },
-      { src: "/hospital2.png", alt: "Hospital São Lucas — ", aspect: "portrait" },
-      { src: "/hospital5.png", alt: "Hospital São Lucas — ", aspect: "landscape" },
-      { src: "/hospital4.png", alt: "Hospital São Lucas — ", aspect: "portrait" },
-      { src: "/hospital1.png", alt: "Hospital São Lucas — ", aspect: "landscape" },
-    ],
-  },
-  {
     slug: "cobertura-lourdes",
     num: "11",
     title: "Cobertura Lourdes",
@@ -346,32 +405,7 @@ export const projects: Project[] = [
       { src: "/cm13.jpeg", alt: "Casa Bandeirantes — ", aspect: "portrait" },
     ],
   },
-  {
-    slug: "condominio-aldeia-da-cachoeira-das-pedras",
-    num: "13",
-    title: "Condomínio Aldeia da Cachoeira das Pedras",
-    category: "Projeto paisagístico em residência",
-    year: "2024",
-    location: "Belo Horizonte, MG",
-    services: ["Criação", "Implantação", "Manutenção"],
-    tags: ["Residencial", "Indoor", "Curadoria"],
-    description:
-      "Elegância botânica indoor: plantas selecionadas para complementar o design de interiores.",
-    longDescription: [
-          ],
-    quote: "A exuberância da mata nativa trazida para o convívio diário, celebrando a liberdade da vida ao ar livre.",
-    coverSrc: "/cacp04.jpeg",
-    photos: [
-      { src: "/cacp01.jpeg", alt: "Condomínio Aldeia da Cachoeira das Pedras — ", aspect: "landscape" },
-      { src: "/cacp02.jpeg", alt: "Condomínio Aldeia da Cachoeira das Pedras — ", aspect: "portrait" },
-      { src: "/cacp03.jpeg", alt: "Condomínio Aldeia da Cachoeira das Pedras — ", aspect: "landscape" },
-      { src: "/cacp05.jpeg", alt: "Condomínio Aldeia da Cachoeira das Pedras — ", aspect: "landscape" },
-      { src: "/cacp06.jpeg", alt: "Condomínio Aldeia da Cachoeira das Pedras — ", aspect: "portrait" },
-      { src: "/cacp07.jpeg", alt: "Condomínio Aldeia da Cachoeira das Pedras — ", aspect: "portrait" },
-      { src: "/cacp08.jpeg", alt: "Condomínio Aldeia da Cachoeira das Pedras — ", aspect: "portrait" },
-      { src: "/cacp00.jpeg", alt: "Condomínio Aldeia da Cachoeira das Pedras — ", aspect: "landscape" },
-    ],
-  },
+
   {
     slug: "condominio-victoria-golf-lagoa-santa",
     num: "14",
@@ -834,31 +868,6 @@ export const projects: Project[] = [
       { src: "/aps06.jpeg", alt: "Apartamento Savassi — ", aspect: "landscape" },
       { src: "/aps09.jpeg", alt: "Apartamento Savassi — ", aspect: "landscape" },
       { src: "/aps08.jpeg", alt: "Apartamento Savassi — ", aspect: "portrait" },
-    ],
-  },
-  {
-    slug: "automovel-club",
-    num: "31",
-    title: "Automóvel Club",
-    category: "Paisagismo corporativo",
-    year: "2022",
-    location: "Belo Horizonte, MG",
-    services: ["Criação", "Implementação"],
-    tags: ["Paisagismo corporativo", "Projeto exclusivo", "Implementação"],
-    description:
-      "Um projeto que une a história e sofisticação do Automóvel Club com a linguagem contemporânea do paisagismo.",
-    longDescription: [
-      
-    ],
-    quote:
-      "O projeto buscou criar um diálogo entre o ambiente construído e a natureza — onde cada planta tem uma função estética e simbólica.",
-    coverSrc: "/auto01.png",
-    photos: [
-      { src: "/auto01.png", alt: "Automóvel Club — ", aspect: "landscape" },
-      { src: "/auto2.png", alt: "Automóvel Club — ", aspect: "portrait" },
-      { src: "/auto3.png", alt: "Automóvel Club — ", aspect: "portrait" },
-      { src: "/auto4.png", alt: "Automóvel Club — ", aspect: "portrait" },
-      { src: "/auto7.png", alt: "Automóvel Club — ", aspect: "portrait" },
     ],
   },
   {
