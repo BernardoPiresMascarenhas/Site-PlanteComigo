@@ -5,15 +5,17 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { label: "Sobre", href: "/#sobre" },
   { label: "Serviços", href: "/#servicos" }, 
-  { label: "Projetos", href: "/#projetos" },
+  { label: "Projetos", href: "/projetos" },
   { label: "Contato", href: "/#contato" },
 ];
 
 export default function Navbar() {
+  const pathname = usePathname(); // Pegando a rota atual
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -84,19 +86,27 @@ export default function Navbar() {
 
       {/* Desktop links */}
       <ul className="hidden md:flex gap-10 list-none">
-        {navLinks.map((link) => (
-          <li key={link.href}>
-            <Link
-              href={link.href}
-              className={cn(
-                "text-[0.7rem] font-dm font-normal tracking-[0.18em] uppercase transition-colors duration-300 hover:text-olive",
-                scrolled ? "text-warm-gray" : "text-ice/80"
-              )}
-            >
-              {link.label}
-            </Link>
-          </li>
-        ))}
+        {navLinks.map((link) => {
+          // Lógica de roteamento dinâmico
+          let finalHref = link.href;
+          if (link.label === "Projetos" && pathname === "/") {
+            finalHref = "/#projetos";
+          }
+
+          return (
+            <li key={link.label}>
+              <Link
+                href={finalHref}
+                className={cn(
+                  "text-[0.7rem] font-dm font-normal tracking-[0.18em] uppercase transition-colors duration-300 hover:text-olive",
+                  scrolled ? "text-warm-gray" : "text-ice/80"
+                )}
+              >
+                {link.label}
+              </Link>
+            </li>
+          );
+        })}
       </ul>
 
       {/* Mobile hamburger */}
@@ -150,26 +160,34 @@ export default function Navbar() {
         </motion.p>
 
         <div className="flex flex-col gap-2 relative z-10">
-          {navLinks.map((link, i) => (
-            <motion.div
-              key={link.href}
-              initial={{ opacity: 0, x: -20 }}
-              animate={menuOpen ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-              transition={{ delay: 0.15 + i * 0.1, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              className="border-b border-white/5 pb-4 pt-2"
-            >
-              <Link
-                href={link.href}
-                onClick={() => setMenuOpen(false)}
-                className="flex items-center justify-between font-cormorant text-3xl font-light text-ice/90 hover:text-sand transition-colors"
+          {navLinks.map((link, i) => {
+            // Lógica de roteamento dinâmico também no mobile
+            let finalHref = link.href;
+            if (link.label === "Projetos" && pathname === "/") {
+              finalHref = "/#projetos";
+            }
+
+            return (
+              <motion.div
+                key={link.label}
+                initial={{ opacity: 0, x: -20 }}
+                animate={menuOpen ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                transition={{ delay: 0.15 + i * 0.1, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                className="border-b border-white/5 pb-4 pt-2"
               >
-                {link.label}
-                <span className="text-sand/30 text-xs font-dm font-light">
-                  0{i + 1}
-                </span>
-              </Link>
-            </motion.div>
-          ))}
+                <Link
+                  href={finalHref}
+                  onClick={() => setMenuOpen(false)}
+                  className="flex items-center justify-between font-cormorant text-3xl font-light text-ice/90 hover:text-sand transition-colors"
+                >
+                  {link.label}
+                  <span className="text-sand/30 text-xs font-dm font-light">
+                    0{i + 1}
+                  </span>
+                </Link>
+              </motion.div>
+            );
+          })}
         </div>
 
         {/* Rodapé do Menu */}
