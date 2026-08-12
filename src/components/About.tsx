@@ -49,7 +49,7 @@ export default function About() {
             className="relative h-[520px] md:h-[765px] md:mt-[20px]"
           >
             <Image
-              src="/about3.jpeg"
+              src="/sobre.jpeg"
               alt="Espaço verde contemporâneo projetado pela PlanteComigo"
               fill
               className="object-cover"
