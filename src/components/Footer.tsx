@@ -110,11 +110,12 @@ export default function Footer() {
           <span className="text-[0.6rem] tracking-[0.1em] text-ice/15 font-dm font-light uppercase">
             Desenvolvido por{" "}
             <Link 
-              href="https://github.com/BernardoPiresMascarenhas" 
+              href="https://www.bernardopiresdev.com.br/"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-sand/50 transition-colors duration-300 underline underline-offset-2 decoration-white/5"
             >
-              Bernardo Pires
+              Bernardo Pires Dev
             </Link>
           </span>
         </div>
