@@ -24,7 +24,7 @@ const detailedPhases = [
     title: "Seleção de Fornecedores",
     subtitle: "A busca pela excelência",
     desc: "A beleza de um jardim depende diretamente da qualidade de suas raízes e materiais. Temos uma rede de fornecedores homologados e viveiros exclusivos. Selecionamos rigorosamente as espécies botânicas mais saudáveis, os vasos mais elegantes e os substratos mais ricos, garantindo um resultado final impecável.",
-    image: "/fornecedores2.jpeg",
+    image: "/fornecedores1.jpeg",
   },
   {
     id: "implantacao",
